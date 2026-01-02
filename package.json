@@ -1,0 +1,12 @@
+{
+  "name": "excel-lab",
+  "version": "1.0.0",
+  "description": "Excel Lab - Professional Excel Courses and Consulting",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
