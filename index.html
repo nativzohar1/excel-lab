@@ -126,6 +126,9 @@
                     'stat1': 'Years of Excel & data experience',
                     'stat2': 'Happy clients',
                     'stat3': 'Practical hands-on training'
+                    ,
+                    'meta-description': 'Excel Lab — Excel & BI experts for businesses and individuals. Online Excel courses, VBA automation and business dashboards. Professional Excel consulting to save time and money.',
+                    'meta-keywords': 'online excel course, excel training, VBA automation, Power BI, Power Query, dashboards, Excel consulting'
                 },
                 he: {
                     'products-title': 'המוצרים שלנו',
@@ -143,6 +146,9 @@
                     'nav-talk': 'דבר איתי',
                     'nav-products': 'המוצרים שלנו',
                     'stat1': 'שנות ניסיון באקסל ודאטה',
+                    
+                    'meta-description': 'המומחים לאקסל ו-BI. קורסים באקסל אונליין, פיתוח אוטומציה ב-VBA ובניית דשבורדים עסקיים. ייעוץ מקצועי לחיסכון בזמן ובמשאבים.',
+                    'meta-keywords': 'קורס אקסל אונליין, לימוד אקסל, VBA, Power BI, Power Query, דשבורדים, ייעוץ אקסל'
                     'stat2': 'לקוחות מרוצים',
                     'stat3': 'פרקטיקה מעשית'
                 }
@@ -230,6 +236,8 @@
             phraseMap.heToEn['Power Query - אוטומציה של נתונים'] = 'Power Query - data automation';
             phraseMap.heToEn['לימוד PowerBI ממתחיל למתקדם'] = 'PowerBI training from beginner to advanced';
             phraseMap.heToEn['בניית דשבורדים ויזואליים'] = 'Building visual dashboards';
+            phraseMap.heToEn['שאלות נפוצות'] = 'Frequently Asked Questions';
+            phraseMap.heToEn['רוצה להתייעץ איתנו?'] = 'Want to consult with us?';
 
             // build reverse map (en->he) automatically
             Object.keys(phraseMap.heToEn).forEach(k => {
@@ -337,6 +345,34 @@
                 } else {
                     document.title = 'Excel Lab | Online Excel Courses | Excel Training';
                 }
+
+                // Update meta description and keywords when available
+                try{
+                    const metaDesc = document.querySelector('meta[name="description"]');
+                    const metaKeys = document.querySelector('meta[name="keywords"]');
+                    if(metaDesc){
+                        const md = (map['meta-description']) ? map['meta-description'] : metaDesc.getAttribute('content');
+                        metaDesc.setAttribute('content', md);
+                    }
+                    if(metaKeys){
+                        const mk = (map['meta-keywords']) ? map['meta-keywords'] : metaKeys.getAttribute('content');
+                        metaKeys.setAttribute('content', mk);
+                    }
+                }catch(e){}
+
+                // Update JSON-LD description if present
+                try{
+                    const ld = document.querySelector('script[type="application/ld+json"]');
+                    if(ld){
+                        try{
+                            const json = JSON.parse(ld.textContent);
+                            if(json && (map['meta-description'])){
+                                json.description = map['meta-description'];
+                                ld.textContent = JSON.stringify(json, null, 2);
+                            }
+                        }catch(e){}
+                    }
+                }catch(e){}
 
                 // Update language icon/title
                 const icon = document.getElementById('lang-icon');
