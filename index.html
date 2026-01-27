@@ -90,11 +90,14 @@
                 <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                     <i id="theme-icon" class="fa-solid fa-sun"></i>
                 </button>
-                <a href="https://wa.me/972507225885" target="_blank" class="text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-bold rounded-lg text-sm px-3 py-2 md:px-4 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800 flex items-center gap-2">
+                <button id="lang-toggle" type="button" title="החלפת שפה / Switch language" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <i id="lang-icon" class="fa-solid fa-language"></i>
+                </button>
+                <a id="nav-talk" href="https://wa.me/972507225885" target="_blank" class="text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-bold rounded-lg text-sm px-3 py-2 md:px-4 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800 flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     דבר איתי
                 </a>
-                <a href="#products" class="text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline">המוצרים שלנו</a>
+                <a id="nav-products" href="#products" class="text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline">המוצרים שלנו</a>
             </div>
         </div>
     </nav>
@@ -103,34 +106,142 @@
     <section id="products" class="py-20 px-4 bg-gray-100 dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800">
         <div class="max-w-screen-xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white">המוצרים שלנו</h2>
-                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.</p>
+                <h2 id="products-title" class="text-3xl md:text-4xl font-black mb-4 dark:text-white">המוצרים שלנו</h2>
+                <p id="products-desc" class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Product 1 -->
                 <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
                     <img src="images/product1.webp" alt="קורס אקסל אונליין" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">קורס אקסל אונליין</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-4">לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.</p>
+                    <h3 id="product1-title" class="text-xl font-bold mb-2 dark:text-white">קורס אקסל אונליין</h3>
+                    <p id="product1-desc" class="text-gray-500 dark:text-gray-400 mb-4">לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.</p>
                     <a href="#" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition">למידע נוסף</a>
                 </div>
                 <!-- Product 2 -->
                 <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
                     <img src="images/product2.webp" alt="תבניות אקסל חכמות" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">תבניות אקסל חכמות</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-4">מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.</p>
+                    <h3 id="product2-title" class="text-xl font-bold mb-2 dark:text-white">תבניות אקסל חכמות</h3>
+                    <p id="product2-desc" class="text-gray-500 dark:text-gray-400 mb-4">מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.</p>
                     <a href="#" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition">למידע נוסף</a>
                 </div>
                 <!-- Product 3 -->
                 <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
                     <img src="images/product3.webp" alt="דוחות אוטומטיים לעסקים" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">דוחות אוטומטיים לעסקים</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-4">פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.</p>
+                    <h3 id="product3-title" class="text-xl font-bold mb-2 dark:text-white">דוחות אוטומטיים לעסקים</h3>
+                    <p id="product3-desc" class="text-gray-500 dark:text-gray-400 mb-4">פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.</p>
                     <a href="#" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition">למידע נוסף</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Language / i18n script -->
+    <script>
+        (function(){
+            const translations = {
+                en: {
+                    'products-title': 'Our Products',
+                    'products-desc': 'Choose the product that fits your needs – courses, ready reports, Excel templates and more.',
+                    'product1-title': 'Online Excel Course',
+                    'product1-desc': 'Learn Excel from basics to advanced, with exercises, recordings and personal support.',
+                    'product2-title': 'Smart Excel Templates',
+                    'product2-desc': 'A selection of ready templates for budgets, tasks, and reports – instant download.',
+                    'product3-title': 'Automated Reports for Businesses',
+                    'product3-desc': 'Custom automated reports for your business – save time and reduce errors.',
+                    'hero-title': 'Excel Experts and Data Solutions',
+                    'hero-desc': 'We turn data into power. Whether you need a professional Excel course, VBA automation or business dashboards – you are in the right place.',
+                    'hero-cta-whatsapp': 'Consultation & Signup on WhatsApp',
+                    'hero-cta-services': 'Our Services',
+                    'nav-talk': 'Talk to me',
+                    'nav-products': 'Products',
+                    'stat1': 'Years of Excel & data experience',
+                    'stat2': 'Happy clients',
+                    'stat3': 'Practical hands-on training'
+                },
+                he: {
+                    'products-title': 'המוצרים שלנו',
+                    'products-desc': 'בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.',
+                    'product1-title': 'קורס אקסל אונליין',
+                    'product1-desc': 'לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.',
+                    'product2-title': 'תבניות אקסל חכמות',
+                    'product2-desc': 'מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.',
+                    'product3-title': 'דוחות אוטומטיים לעסקים',
+                    'product3-desc': 'פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.',
+                    'hero-title': 'מומחים לאקסל ופתרונות דאטה לעסקים',
+                    'hero-desc': 'אנחנו הופכים נתונים לכוח. בין אם אתם מחפשים קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA או בניית דשבורדים עסקיים - הגעתם למקום הנכון.',
+                    'hero-cta-whatsapp': 'ייעוץ והרשמה בווטסאפ',
+                    'hero-cta-services': 'לשירותים שלנו',
+                    'nav-talk': 'דבר איתי',
+                    'nav-products': 'המוצרים שלנו',
+                    'stat1': 'שנות ניסיון באקסל ודאטה',
+                    'stat2': 'לקוחות מרוצים',
+                    'stat3': 'פרקטיקה מעשית'
+                }
+            };
+
+            function detectLanguage(){
+                try{
+                    const stored = localStorage.getItem('siteLang');
+                    if(stored) return stored;
+                    const langs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+                    for(const l of langs){
+                        const lower = (l||'').toLowerCase();
+                        if(lower.startsWith('he') || lower.includes('he-') || lower.includes('-il') || lower.endsWith('il')) return 'he';
+                    }
+                }catch(e){}
+                return 'en';
+            }
+
+            function applyLang(lang){
+                const map = translations[lang] || translations.en;
+                document.documentElement.lang = lang;
+                document.documentElement.dir = (lang === 'he') ? 'rtl' : 'ltr';
+                // Update mapped elements
+                Object.keys(map).forEach(key => {
+                    const el = document.getElementById(key);
+                    if(!el) return;
+                    // For buttons/links we replace innerText only, keep icons
+                    if(el.querySelector && el.querySelector('i')){
+                        // replace text nodes only
+                        for(const node of Array.from(el.childNodes)){
+                            if(node.nodeType === Node.TEXT_NODE) node.nodeValue = map[key];
+                        }
+                    } else {
+                        el.textContent = map[key];
+                    }
+                });
+
+                // Update page title (document.title)
+                if(lang === 'he'){
+                    document.title = 'Excel Lab | קורס אקסל אונליין | לימוד אקסל למתקדמים';
+                } else {
+                    document.title = 'Excel Lab | Online Excel Courses | Excel Training';
+                }
+
+                // Update language icon/title
+                const icon = document.getElementById('lang-icon');
+                const toggle = document.getElementById('lang-toggle');
+                if(icon) icon.className = 'fa-solid fa-language';
+                if(toggle) toggle.title = (lang === 'he') ? 'עברית (ברירת מחדל)' : 'English (default)';
+
+                localStorage.setItem('siteLang', lang);
+            }
+
+            // Init
+            const initial = detectLanguage();
+            applyLang(initial);
+
+            // Lang toggle
+            const btn = document.getElementById('lang-toggle');
+            if(btn){
+                btn.addEventListener('click', () => {
+                    const current = document.documentElement.lang || initial;
+                    const next = (current === 'he') ? 'en' : 'he';
+                    applyLang(next);
+                });
+            }
+        })();
+    </script>
     <!-- Hero Section -->
     <section class="pt-24 pb-16 md:pt-32 md:pb-20 px-4 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-20 dark:opacity-10">
@@ -139,19 +250,19 @@
         </div>
 
         <div class="max-w-screen-xl mx-auto text-center">
-            <h1 class="mb-4 text-4xl sm:text-5xl font-black tracking-tight leading-tight text-gray-900 md:text-6xl lg:text-7xl dark:text-white" style="text-wrap: balance;">
+            <h1 id="hero-title" class="mb-4 text-4xl sm:text-5xl font-black tracking-tight leading-tight text-gray-900 md:text-6xl lg:text-7xl dark:text-white" style="text-wrap: balance;">
                 מומחים לאקסל <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-500 block sm:inline">ופתרונות דאטה לעסקים</span>
             </h1>
-            <p class="mb-8 text-base sm:text-lg font-normal text-gray-500 lg:text-xl sm:px-16 dark:text-gray-400 max-w-4xl mx-auto">
+            <p id="hero-desc" class="mb-8 text-base sm:text-lg font-normal text-gray-500 lg:text-xl sm:px-16 dark:text-gray-400 max-w-4xl mx-auto">
                 אנחנו הופכים נתונים לכוח. בין אם אתם מחפשים קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA או בניית דשבורדים עסקיים - הגעתם למקום הנכון.
             </p>
             <div class="flex flex-col items-center gap-4">
                 <div class="flex flex-col w-full sm:w-auto space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
-                    <a href="https://wa.me/972507225885" target="_blank" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-white rounded-xl bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900 transition-all hover:scale-105 shadow-xl shadow-brand-500/20">
+                    <a id="hero-cta-whatsapp" href="https://wa.me/972507225885" target="_blank" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-white rounded-xl bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900 transition-all hover:scale-105 shadow-xl shadow-brand-500/20">
                         ייעוץ והרשמה בווטסאפ
                         <i class="fa-brands fa-whatsapp mr-2 text-xl"></i>
                     </a>
-                    <a href="#services" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-gray-900 rounded-xl border-2 border-gray-200 hover:bg-gray-50 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-800 transition-all">
+                    <a id="hero-cta-services" href="#services" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-gray-900 rounded-xl border-2 border-gray-200 hover:bg-gray-50 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-800 transition-all">
                         לשירותים שלנו
                     </a>
                 </div>
@@ -169,15 +280,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800">
                     <dt class="mb-2 text-4xl font-black text-brand-600 dark:text-brand-500">10+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400 font-bold">שנות ניסיון באקסל ודאטה</dd>
+                    <dd id="stat1" class="text-gray-500 dark:text-gray-400 font-bold">שנות ניסיון באקסל ודאטה</dd>
                 </div>
                 <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800">
                     <dt class="mb-2 text-4xl font-black text-blue-600 dark:text-blue-500">200+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400 font-bold">לקוחות מרוצים</dd>
+                    <dd id="stat2" class="text-gray-500 dark:text-gray-400 font-bold">לקוחות מרוצים</dd>
                 </div>
                 <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800">
                     <dt class="mb-2 text-4xl font-black text-purple-600 dark:text-purple-500">100%</dt>
-                    <dd class="text-gray-500 dark:text-gray-400 font-bold">פרקטיקה מעשית</dd>
+                    <dd id="stat3" class="text-gray-500 dark:text-gray-400 font-bold">פרקטיקה מעשית</dd>
                 </div>
             </div>
         </div>
