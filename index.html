@@ -339,6 +339,39 @@
                     }catch(e){/* ignore individual node errors */}
                 });
 
+                // Fallback pass: if some nodes still contain Hebrew (or English when switching back),
+                // perform substring replacements using the phrase maps to catch partial/mixed nodes.
+                try{
+                    if(isToEn){
+                        const keys = Object.keys(phraseMap.heToEn).sort((a,b)=>b.length - a.length);
+                        textNodes.forEach(item => {
+                            try{
+                                if(!item.node || !item.node.nodeValue) return;
+                                if(!/[\u0590-\u05FF]/.test(item.node.nodeValue)) return;
+                                let txt = item.node.nodeValue;
+                                for(const k of keys){
+                                    if(txt.includes(k)) txt = txt.split(k).join(phraseMap.heToEn[k]);
+                                }
+                                if(txt !== item.node.nodeValue) item.node.nodeValue = txt;
+                            }catch(e){}
+                        });
+                    } else {
+                        const keys = Object.keys(phraseMap.enToHe).sort((a,b)=>b.length - a.length);
+                        textNodes.forEach(item => {
+                            try{
+                                if(!item.node || !item.node.nodeValue) return;
+                                // check for Latin letters as indicator of English content
+                                if(!/[A-Za-z]/.test(item.node.nodeValue)) return;
+                                let txt = item.node.nodeValue;
+                                for(const k of keys){
+                                    if(txt.includes(k)) txt = txt.split(k).join(phraseMap.enToHe[k]);
+                                }
+                                if(txt !== item.node.nodeValue) item.node.nodeValue = txt;
+                            }catch(e){}
+                        });
+                    }
+                }catch(e){}
+
                 // Update page title (document.title)
                 if(lang === 'he'){
                     document.title = 'Excel Lab | קורס אקסל אונליין | לימוד אקסל למתקדמים';
