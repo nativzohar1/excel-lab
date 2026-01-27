@@ -265,13 +265,42 @@
                 }
             }
 
+            // keep track of current language for observer and toggles
+            let currentLang = null;
+
             // Collect text nodes and initialize language after DOM ready
             function initLang(){
                 try{ walkText(document.body); }catch(e){}
-                const initial = detectLanguage();
+                // prefer explicit URL lang param if present
+                const urlParams = new URLSearchParams(window.location.search);
+                const q = (urlParams.get('lang') || '').toLowerCase();
+                let initial = detectLanguage();
+                if(q === 'en' || q === 'he'){
+                    initial = q;
+                    try{ localStorage.setItem('siteLang', initial); }catch(e){}
+                }
+                currentLang = initial;
                 applyLang(initial);
                 // attempt to swap localized images for initial language
                 try{ swapImagesForLang(initial); }catch(e){}
+
+                // Observe DOM mutations and translate newly added nodes
+                try{
+                    const observer = new MutationObserver(mutations => {
+                        let added = false;
+                        for(const m of mutations){
+                            for(const n of m.addedNodes){
+                                try{
+                                    if(n.nodeType === Node.ELEMENT_NODE){ walkText(n); added = true; }
+                                }catch(e){}
+                            }
+                        }
+                        if(added){
+                            try{ applyLang(currentLang); }catch(e){}
+                        }
+                    });
+                    observer.observe(document.body, { childList: true, subtree: true });
+                }catch(e){}
             }
 
             if(document.readyState === 'loading'){
@@ -500,6 +529,7 @@
                 btn.addEventListener('click', async () => {
                     const current = document.documentElement.lang || detectLanguage();
                     const next = (current === 'he') ? 'en' : 'he';
+                    currentLang = next;
                     applyLang(next);
                     try{ await swapImagesForLang(next); }catch(e){}
                 });
