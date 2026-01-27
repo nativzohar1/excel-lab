@@ -414,6 +414,25 @@
                 if(toggle) toggle.title = (lang === 'he') ? 'עברית (ברירת מחדל)' : 'English (default)';
 
                 localStorage.setItem('siteLang', lang);
+                // Aggressive fallback: replace Hebrew substrings inside the body's HTML
+                // This catches cases where textNodes/phraseMap misses mixed content or inline elements.
+                try{
+                    if(isToEn){
+                        let bodyHtml = document.body.innerHTML;
+                        const keys = Object.keys(phraseMap.heToEn).sort((a,b)=>b.length - a.length);
+                        for(const k of keys){
+                            if(bodyHtml.includes(k)) bodyHtml = bodyHtml.split(k).join(phraseMap.heToEn[k]);
+                        }
+                        if(bodyHtml !== document.body.innerHTML) document.body.innerHTML = bodyHtml;
+                    } else {
+                        let bodyHtml = document.body.innerHTML;
+                        const keys = Object.keys(phraseMap.enToHe).sort((a,b)=>b.length - a.length);
+                        for(const k of keys){
+                            if(bodyHtml.includes(k)) bodyHtml = bodyHtml.split(k).join(phraseMap.enToHe[k]);
+                        }
+                        if(bodyHtml !== document.body.innerHTML) document.body.innerHTML = bodyHtml;
+                    }
+                }catch(e){/* ignore aggressive fallback errors */}
             }
 
                 // Image localization: try loading `name_lang.ext` variants (e.g. gallery1_en.webp)
