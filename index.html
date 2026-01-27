@@ -106,6 +106,7 @@
     <!-- Language / i18n script -->
     <script>
         (function(){
+            // Comprehensive translations map and runtime DOM-text translation
             const translations = {
                 en: {
                     'products-title': 'Our Products',
@@ -147,6 +148,85 @@
                 }
             };
 
+            // Phrase-level mappings for full DOM text translation (he->en and en->he)
+            const phraseMap = {
+                heToEn: {
+                    'המוצרים שלנו': 'Our Products',
+                    'בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.': 'Choose the product that fits your needs – courses, ready reports, Excel templates and more.',
+                    'קורס אקסל אונליין': 'Online Excel Course',
+                    'לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.': 'Learn Excel from basics to advanced, with exercises, recordings and personal support.',
+                    'תבניות אקסל חכמות': 'Smart Excel Templates',
+                    'מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.': 'A selection of ready templates for budgets, tasks, and reports – instant download.',
+                    'דוחות אוטומטיים לעסקים': 'Automated Reports for Businesses',
+                    'פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.': 'Custom automated reports for your business – save time and reduce errors.',
+                    'מומחים לאקסל ופתרונות דאטה לעסקים': 'Excel experts and data solutions for businesses',
+                    'אנחנו הופכים נתונים לכוח. בין אם אתם מחפשים קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA או בניית דשבורדים עסקיים - הגעתם למקום הנכון.': 'We turn data into power. Whether you need a professional Excel course, VBA automation or business dashboards – you are in the right place.',
+                    'ייעוץ והרשמה בווטסאפ': 'Consultation & Signup on WhatsApp',
+                    'לשירותים שלנו': 'Our Services',
+                    'דבר איתי': 'Talk to me',
+                    'מענה מהיר לכל שאלה בנושאי אקסל ואוטומציה': 'Fast answers to any Excel & automation questions',
+                    'שנות ניסיון באקסל ודאטה': 'Years of Excel & data experience',
+                    'לקוחות מרוצים': 'Happy clients',
+                    'פרקטיקה מעשית': 'Practical hands-on training',
+                    'הסביבה המקצועית שלנו': 'Our Professional Environment',
+                    'דשבורדים עסקיים': 'Business dashboards',
+                    'ניתוח נתונים מתקדם': 'Advanced data analysis',
+                    'סביבת עבודה פרודוקטיבית': 'Productive work environment',
+                    'דוחות חכמים': 'Smart reports',
+                    'איך נוכל לעזור לך היום?': 'How can we help you today?',
+                    'לימוד אקסל פרטי': 'Private Excel lessons',
+                    'פתרונות לעסקים': 'Business solutions',
+                    'לסילבוס המלא': 'Full syllabus',
+                    'פתרונות עסקיים מתקדמים': 'Advanced business solutions',
+                    'למה אקסל ב-2026?': 'Why Excel in 2026?',
+                    'מוכנים לקחת את האקסל לשלב הבא?': 'Ready to take Excel to the next level?',
+                    'האם הקורס מתאים למתחילים?': 'Is the course suitable for beginners?',
+                    'איך מתבצעים השיעורים?': 'How are the lessons conducted?',
+                    'האם מקבלים הקלטה?': 'Do you receive a recording?',
+                    'האם מקבלים תמיכה לאחר השיעורים?': 'Do you receive support after the lessons?',
+                    'מה לומדים אצלנו?': 'What do you learn with us?',
+                    'יסודות חזקים': 'Strong foundations',
+                    'פונקציות מתקדמות': 'Advanced functions',
+                    'BI וניתוח נתונים': 'BI & Data Analysis',
+                    'בקרוב: קורס דיגיטלי מלא לרכישה באתר!': 'Coming soon: full digital course for purchase on the site!',
+                    '© 2026 כל הזכויות שמורות': '© 2026 All rights reserved'
+                },
+                enToHe: {}
+            };
+
+            // build reverse map (en->he) automatically
+            Object.keys(phraseMap.heToEn).forEach(k => {
+                phraseMap.enToHe[phraseMap.heToEn[k]] = k;
+            });
+
+            // collect text nodes for translation and store originals
+            const textNodes = [];
+            function isVisible(node){
+                if(!node || !node.parentElement) return false;
+                const style = window.getComputedStyle(node.parentElement);
+                return style && style.display !== 'none' && style.visibility !== 'hidden';
+            }
+
+            function walkText(node){
+                for(let child=node.firstChild; child; child=child.nextSibling){
+                    if(child.nodeType === Node.TEXT_NODE){
+                        const txt = child.nodeValue.replace(/\s+/g,' ').trim();
+                        if(txt.length > 0 && isVisible(child)){
+                            textNodes.push({node: child, original: child.nodeValue});
+                        }
+                    } else if(child.nodeType === Node.ELEMENT_NODE && child.tagName !== 'SCRIPT' && child.tagName !== 'STYLE' && child.tagName !== 'NOSCRIPT'){
+                        walkText(child);
+                    }
+                }
+            }
+
+            // run traversal after DOM ready
+            if(document.readyState === 'loading'){
+                document.addEventListener('DOMContentLoaded', () => walkText(document.body));
+            } else {
+                walkText(document.body);
+            }
+
             function detectLanguage(){
                 try{
                     const stored = localStorage.getItem('siteLang');
@@ -164,18 +244,17 @@
                 const map = translations[lang] || translations.en;
                 document.documentElement.lang = lang;
                 document.documentElement.dir = (lang === 'he') ? 'rtl' : 'ltr';
-                // Update mapped elements
+
+                // Update mapped elements by id (keeps previous behavior)
                 Object.keys(map).forEach(key => {
                     const el = document.getElementById(key);
                     if(!el) return;
                     const text = map[key];
                     const icon = el.querySelector && el.querySelector('i');
                     if(icon){
-                        // remove existing text nodes to avoid duplicates
                         for(const node of Array.from(el.childNodes)){
                             if(node.nodeType === Node.TEXT_NODE) node.remove();
                         }
-                        // insert a single text node in the original position (before or after the icon)
                         if(el.firstElementChild === icon){
                             icon.insertAdjacentText('afterend', ' ' + text);
                         } else {
@@ -184,6 +263,27 @@
                     } else {
                         el.textContent = text;
                     }
+                });
+
+                // Translate all collected text nodes using phraseMap
+                const isToEn = (lang === 'en');
+                textNodes.forEach(item => {
+                    try{
+                        const orig = item.original.replace(/\s+/g,' ').trim();
+                        if(!orig) return;
+                        let replacement = null;
+                        if(isToEn){
+                            replacement = phraseMap.heToEn[orig];
+                        } else {
+                            replacement = phraseMap.enToHe[orig];
+                        }
+                        if(replacement){
+                            // preserve leading/trailing whitespace
+                            const leading = item.original.match(/^\s*/)[0] || '';
+                            const trailing = item.original.match(/\s*$/)[0] || '';
+                            item.node.nodeValue = leading + replacement + trailing;
+                        }
+                    }catch(e){/* ignore individual node errors */}
                 });
 
                 // Update page title (document.title)
