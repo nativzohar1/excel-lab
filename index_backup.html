@@ -100,13 +100,43 @@
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     <span data-i18n="nav_talk">דבר איתי</span>
                 </a>
-                <a href="#services" class="hidden md:block text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline" data-i18n="nav_products">המוצרים שלנו</a>
+                <a href="#products" class="text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline" data-i18n="nav_products">המוצרים שלנו</a>
             </div>
         </div>
     </nav>
 
-    <!-- Products Section REMOVED as per user request -->
-
+    <!-- Products Section -->
+    <section id="products" class="py-20 px-4 bg-gray-100 dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white" data-i18n="products_title">המוצרים שלנו</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="products_subtitle">בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
+                    <img src="images/product1.webp" alt="קורס אקסל אונליין" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
+                    <h3 class="text-xl font-bold mb-2 dark:text-white" data-i18n="prod_course_title">קורס אקסל אונליין</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4" data-i18n="prod_course_desc">לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.</p>
+                    <a href="#syllabus" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition" data-i18n="btn_more_info">למידע נוסף</a>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
+                    <img src="images/product2.webp" alt="תבניות אקסל חכמות" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
+                    <h3 class="text-xl font-bold mb-2 dark:text-white" data-i18n="prod_templates_title">תבניות אקסל חכמות</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4" data-i18n="prod_templates_desc">מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.</p>
+                    <a href="#business-services" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition" data-i18n="btn_more_info">למידע נוסף</a>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
+                    <img src="images/product3.webp" alt="דוחות אוטומטיים לעסקים" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
+                    <h3 class="text-xl font-bold mb-2 dark:text-white" data-i18n="prod_reports_title">דוחות אוטומטיים לעסקים</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4" data-i18n="prod_reports_desc">פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.</p>
+                    <a href="#business-services" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition" data-i18n="btn_more_info">למידע נוסף</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Hero Section -->
     <section class="pt-24 pb-16 md:pt-32 md:pb-20 px-4 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-20 dark:opacity-10">
@@ -294,9 +324,9 @@
                         אנחנו בונים דוחות ניהוליים חכמים שמתעדכנים אוטומטית. במקום לבזבז שעות על איסוף נתונים, קבלו תמונת מצב עסקית מדויקת בלחיצת כפתור. מתאים למנהלי כספים, שיווק, תפעול ומנכ"לים.
                     </p>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="biz_report_1">דוחות כספיים ותקציב מול ביצוע</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="biz_report_2">דשבורדים למכירות ושיווק</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="biz_report_3">אוטומציה של תהליכי דיווח</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_report_1">דוחות כספיים ותקציב מול ביצוע</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_report_2">דשבורדים למכירות ושיווק</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_report_3">אוטומציה של תהליכי דיווח</span></li>
                     </ul>
                 </div>
 
@@ -309,9 +339,9 @@
                         VBA‏ (Visual Basic for Applications) היא שפת התכנות של אקסל שמאפשרת לנו ליצור "קסמים". אנחנו מפתחים מאקרואים שמבצעים פעולות מורכבות בשניות, חוסכים ימי עבודה שלמים ומונעים טעויות אנוש.
                     </p>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="biz_vba_1">יצירת טפסים וממשקי משתמש</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="biz_vba_2">חיבור אקסל למערכות חיצוניות</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="biz_vba_3">ניקוי וסידור נתונים אוטומטי</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_vba_1">יצירת טפסים וממשקי משתמש</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_vba_2">חיבור אקסל למערכות חיצוניות</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_vba_3">ניקוי וסידור נתונים אוטומטי</span></li>
                     </ul>
                 </div>
             </div>
@@ -333,7 +363,7 @@
                     </p>
                     <a href="https://wa.me/972507225885" class="inline-flex items-center justify-center px-6 py-3 text-base font-bold text-brand-900 bg-white rounded-lg hover:bg-gray-100 transition-all">
                         <span data-i18n="why_btn">רוצה להתייעץ איתנו?</span>
-                        <i class="fa-solid fa-arrow-left mx-2 rtl:mx-2 ltr:ml-2"></i>
+                        <i class="fa-solid fa-arrow-left mx-2"></i>
                     </a>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
@@ -364,10 +394,10 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3 dark:text-white" data-i18n="card_basic_title">יסודות חזקים</h3>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_basic_1">הכרת הממשק לעומק</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_basic_2">פונקציות בסיס: SUM, COUNT, AVERAGE</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_basic_3">עיצוב מותנה ועיצוב טבלאות</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_basic_4">קיצורי מקלדת לחיסכון בזמן</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_1">הכרת הממשק לעומק</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_2">פונקציות בסיס: SUM, COUNT, AVERAGE</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_3">עיצוב מותנה ועיצוב טבלאות</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_4">קיצורי מקלדת לחיסכון בזמן</span></li>
                     </ul>
                 </div>
 
@@ -379,10 +409,10 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3 dark:text-white" data-i18n="card_adv_title">פונקציות מתקדמות</h3>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_adv_1">VLOOKUP & XLOOKUP</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_adv_2">פונקציות לוגיות: IF, IFS, SWITCH</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_adv_3">מניפולציות על טקסט ותאריכים</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_adv_4">אימות נתונים (Data Validation)</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_1">VLOOKUP & XLOOKUP</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_2">פונקציות לוגיות: IF, IFS, SWITCH</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_3">מניפולציות על טקסט ותאריכים</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_4">אימות נתונים (Data Validation)</span></li>
                     </ul>
                 </div>
 
@@ -393,11 +423,11 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3 dark:text-white" data-i18n="card_bi_title">BI וניתוח נתונים</h3>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_bi_1">Pivot Tables (טבלאות ציר)</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_bi_2">Power Pivot & Data Modeling</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_bi_3">Power Query - אוטומציה של נתונים</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_bi_4">לימוד PowerBI ממתחיל למתקדם</span></li>
-                        <li><i class="fa-solid fa-check text-brand-500 me-2"></i><span data-i18n="card_bi_5">בניית דשבורדים ויזואליים</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_1">Pivot Tables (טבלאות ציר)</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_2">Power Pivot & Data Modeling</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_3">Power Query - אוטומציה של נתונים</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_4">לימוד PowerBI ממתחיל למתקדם</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_5">בניית דשבורדים ויזואליים</span></li>
                     </ul>
                 </div>
             </div>
@@ -424,9 +454,9 @@
                     <span data-i18n="hero_fast_reply">מענה מהיר לכל שאלה בנושאי אקסל ואוטומציה</span>
                 </p>
 
-                <div class="mt-2 inline-block bg-brand-700/50 backdrop-blur-sm border border-brand-400/30 rounded-xl px-4 py-3 w-full sm:w-auto">
-                    <span class="text-white font-medium text-sm md:text-base flex items-center justify-center gap-2 text-center whitespace-normal">
-                        <i class="fa-solid fa-video flex-shrink-0"></i>
+                <div class="mt-2 inline-block bg-brand-700/50 backdrop-blur-sm border border-brand-400/30 rounded-xl px-4 py-2 w-full sm:w-auto">
+                    <span class="text-white font-medium text-sm md:text-base flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-video"></i>
                         <span data-i18n="cta_note">בקרוב: קורס דיגיטלי מלא לרכישה באתר!</span>
                     </span>
                 </div>
@@ -486,14 +516,14 @@
                 <span class="text-2xl font-black text-gray-900 dark:text-white">excel-lab</span>
                 <p class="text-sm text-gray-500 mt-1" data-i18n="footer_rights">© 2026 כל הזכויות שמורות</p>
             </div>
-            <div class="flex gap-6 w-full md:w-auto justify-center md:justify-end mt-4 md:mt-0">
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
+            <div class="flex space-x-6 space-x-reverse rtl:space-x-reverse">
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                     <i class="fa-brands fa-facebook text-xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                     <i class="fa-brands fa-linkedin text-xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                     <i class="fa-brands fa-instagram text-xl"></i>
                 </a>
             </div>
