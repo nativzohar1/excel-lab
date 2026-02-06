@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="Q6oRzxkEa8aQkw5ndmvQbGatwN3MFSHiGrYe5d1HzGM" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Lab | קורס אקסל אונליין | לימוד אקסל למתקדמים</title>
+    <title data-i18n="page_title">Excel Lab | Excel Course Online | Advanced Excel Learning</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
-    <meta name="description" content="המומחים לאקסל ו-BI לעסקים ולפרטיים. בניית דשבורדים, קורס אקסל אונליין, פיתוח אוטומציה ב-VBA ו-Power Query. ייעוץ אקסל מקצועי לחיסכון בזמן וכסף.">
-    <meta name="keywords" content="קורס אקסל אונליין, לימוד אקסל למתקדמים, נוסחאות אקסל, אקסל למתחילים, Power BI, Power Query, דאטה אנליסט, אקסל לעסקים, VBA, אוטומציה באקסל, דשבורדים באקסל, ייעוץ אקסל, מורה פרטי לאקסל, Excel Automation">
+    <meta name="description" content="Excel & BI experts for business. Online Excel courses, VBA automation, Power BI, Dashboards. Professional consulting to save you time and money.">
+    <meta name="keywords" content="korse excel, excel online, power bi, vba, excel automation, dashboards">
     <link rel="canonical" href="https://excel-lab.vercel.app/" />
 
     <!-- Schema Markup -->
@@ -17,7 +17,7 @@
       "@type": "EducationalOrganization",
       "name": "Excel Lab",
       "url": "https://excel-lab.vercel.app/",
-      "description": "המומחים לאקסל ו-BI. קורס אקסל אונליין, לימוד אקסל למתקדמים, נוסחאות אקסל, Power BI ו-Power Query.",
+      "description": "Experts in Excel and BI. Online Excel courses, Advanced Excel, Power BI and Power Query.",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+972-50-722-5885",
@@ -86,456 +86,57 @@
                 <img src="images/logo.webp" alt="Excel Lab Logo" class="h-10 w-auto rounded-full bg-white p-0.5">
                 <span class="self-center text-2xl font-black whitespace-nowrap tracking-tight">excel-lab</span>
             </a>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-3">
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-3 items-center">
+                 <!-- Language Toggle -->
+                 <button id="lang-toggle-btn" class="flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 font-bold">
+                    <i class="fa-solid fa-globe mx-1"></i>
+                    <span id="lang-label">English</span>
+                </button>
+                
                 <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                     <i id="theme-icon" class="fa-solid fa-sun"></i>
                 </button>
-                <button id="lang-toggle" type="button" title="החלפת שפה / Switch language" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                    <i id="lang-icon" class="fa-solid fa-language"></i>
-                </button>
-                <a id="nav-talk" href="https://wa.me/972507225885" target="_blank" class="text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-bold rounded-lg text-sm px-3 py-2 md:px-4 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800 flex items-center gap-2">
+                <a href="https://wa.me/972507225885" target="_blank" class="text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-bold rounded-lg text-sm px-3 py-2 md:px-4 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800 flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
-                    דבר איתי
+                    <span data-i18n="nav_talk">דבר איתי</span>
                 </a>
-                <!-- products nav link removed -->
+                <a href="#products" class="text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline" data-i18n="nav_products">המוצרים שלנו</a>
             </div>
         </div>
     </nav>
-    <!-- Products section removed as requested -->
 
-    <!-- Language / i18n script -->
-    <script>
-        (function(){
-            // Comprehensive translations map and runtime DOM-text translation
-            const translations = {
-                en: {
-                    'products-title': 'Our Products',
-                    'products-desc': 'Choose the product that fits your needs – courses, ready reports, Excel templates and more.',
-                    'product1-title': 'Online Excel Course',
-                    'product1-desc': 'Learn Excel from basics to advanced, with exercises, recordings and personal support.',
-                    'product2-title': 'Smart Excel Templates',
-                    'product2-desc': 'A selection of ready templates for budgets, tasks, and reports – instant download.',
-                    'product3-title': 'Automated Reports for Businesses',
-                    'product3-desc': 'Custom automated reports for your business – save time and reduce errors.',
-                    'hero-title': 'Excel Experts and Data Solutions',
-                    'hero-desc': 'We turn data into power. Whether you need a professional Excel course, VBA automation or business dashboards – you are in the right place.',
-                    'hero-cta-whatsapp': 'Consultation & Signup on WhatsApp',
-                    'hero-cta-services': 'Our Services',
-                    'nav-talk': 'Talk to me',
-                    'nav-products': 'Products',
-                    'stat1': 'Years of Excel & data experience',
-                    'stat2': 'Happy clients',
-                    'stat3': 'Practical hands-on training'
-                    ,
-                    'meta-description': 'Excel Lab — Excel & BI experts for businesses and individuals. Online Excel courses, VBA automation and business dashboards. Professional Excel consulting to save time and money.',
-                    'meta-keywords': 'online excel course, excel training, VBA automation, Power BI, Power Query, dashboards, Excel consulting'
-                },
-                he: {
-                    'products-title': 'המוצרים שלנו',
-                    'products-desc': 'בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.',
-                    'product1-title': 'קורס אקסל אונליין',
-                    'product1-desc': 'לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.',
-                    'product2-title': 'תבניות אקסל חכמות',
-                    'product2-desc': 'מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.',
-                    'product3-title': 'דוחות אוטומטיים לעסקים',
-                    'product3-desc': 'פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.',
-                    'hero-title': 'מומחים לאקסל ופתרונות דאטה לעסקים',
-                    'hero-desc': 'אנחנו הופכים נתונים לכוח. בין אם אתם מחפשים קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA או בניית דשבורדים עסקיים - הגעתם למקום הנכון.',
-                    'hero-cta-whatsapp': 'ייעוץ והרשמה בווטסאפ',
-                    'hero-cta-services': 'לשירותים שלנו',
-                    'nav-talk': 'דבר איתי',
-                    'nav-products': 'המוצרים שלנו',
-                    'stat1': 'שנות ניסיון באקסל ודאטה',
-                    
-                    'meta-description': 'המומחים לאקסל ו-BI. קורסים באקסל אונליין, פיתוח אוטומציה ב-VBA ובניית דשבורדים עסקיים. ייעוץ מקצועי לחיסכון בזמן ובמשאבים.',
-                    'meta-keywords': 'קורס אקסל אונליין, לימוד אקסל, VBA, Power BI, Power Query, דשבורדים, ייעוץ אקסל',
-                    'stat2': 'לקוחות מרוצים',
-                    'stat3': 'פרקטיקה מעשית'
-                }
-            };
-
-            // Phrase-level mappings for full DOM text translation (he->en and en->he)
-            const phraseMap = {
-                heToEn: {
-                    'המוצרים שלנו': 'Our Products',
-                    'בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.': 'Choose the product that fits your needs – courses, ready reports, Excel templates and more.',
-                    'קורס אקסל אונליין': 'Online Excel Course',
-                    'לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.': 'Learn Excel from basics to advanced, with exercises, recordings and personal support.',
-                    'תבניות אקסל חכמות': 'Smart Excel Templates',
-                    'מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.': 'A selection of ready templates for budgets, tasks, and reports – instant download.',
-                    'דוחות אוטומטיים לעסקים': 'Automated Reports for Businesses',
-                    'פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.': 'Custom automated reports for your business – save time and reduce errors.',
-                    'מומחים לאקסל ופתרונות דאטה לעסקים': 'Excel experts and data solutions for businesses',
-                    'אנחנו הופכים נתונים לכוח. בין אם אתם מחפשים קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA או בניית דשבורדים עסקיים - הגעתם למקום הנכון.': 'We turn data into power. Whether you need a professional Excel course, VBA automation or business dashboards – you are in the right place.',
-                    'ייעוץ והרשמה בווטסאפ': 'Consultation & Signup on WhatsApp',
-                    'לשירותים שלנו': 'Our Services',
-                    'דבר איתי': 'Talk to me',
-                    'מענה מהיר לכל שאלה בנושאי אקסל ואוטומציה': 'Fast answers to any Excel & automation questions',
-                    'שנות ניסיון באקסל ודאטה': 'Years of Excel & data experience',
-                    'לקוחות מרוצים': 'Happy clients',
-                    'פרקטיקה מעשית': 'Practical hands-on training',
-                    'הסביבה המקצועית שלנו': 'Our Professional Environment',
-                    'דשבורדים עסקיים': 'Business dashboards',
-                    'ניתוח נתונים מתקדם': 'Advanced data analysis',
-                    'סביבת עבודה פרודוקטיבית': 'Productive work environment',
-                    'דוחות חכמים': 'Smart reports',
-                    'איך נוכל לעזור לך היום?': 'How can we help you today?',
-                    'לימוד אקסל פרטי': 'Private Excel lessons',
-                    'פתרונות לעסקים': 'Business solutions',
-                    'לסילבוס המלא': 'Full syllabus',
-                    'פתרונות עסקיים מתקדמים': 'Advanced business solutions',
-                    'למה אקסל ב-2026?': 'Why Excel in 2026?',
-                    'מוכנים לקחת את האקסל לשלב הבא?': 'Ready to take Excel to the next level?',
-                    'האם הקורס מתאים למתחילים?': 'Is the course suitable for beginners?',
-                    'איך מתבצעים השיעורים?': 'How are the lessons conducted?',
-                    'האם מקבלים הקלטה?': 'Do you receive a recording?',
-                    'האם מקבלים תמיכה לאחר השיעורים?': 'Do you receive support after the lessons?',
-                    'מה לומדים אצלנו?': 'What do you learn with us?',
-                    'יסודות חזקים': 'Strong foundations',
-                    'פונקציות מתקדמות': 'Advanced functions',
-                    'BI וניתוח נתונים': 'BI & Data Analysis',
-                    'בקרוב: קורס דיגיטלי מלא לרכישה באתר!': 'Coming soon: full digital course for purchase on the site!',
-                    '© 2026 כל הזכויות שמורות': '© 2026 All rights reserved'
-                },
-                enToHe: {}
-            };
-
-            // Add a few missing phrase mappings so uncaptured paragraphs translate
-            phraseMap.heToEn['בחר את המסלול המתאים לך ביותר - לימוד אישי או פתרון עסקי'] = 'Choose the path that suits you best - private lessons or business solutions';
-            phraseMap.heToEn['גלול לצפייה בתמונות'] = 'Scroll to view images';
-            phraseMap.heToEn['בזום / Teams'] = 'Zoom / Teams';
-            phraseMap.heToEn['רוצה לשלוט באקסל? שיעורים פרטיים אחד-על-אחד, מותאמים בדיוק לרמה ולצרכים שלך. מנוסחאות בסיסיות ועד Power BI ו-VBA.'] = 'Want to master Excel? One-on-one private lessons, tailored exactly to your level and needs. From basic formulas to Power BI and VBA.';
-            phraseMap.heToEn['צריכים לייעל תהליכים? אנחנו בונים דוחות חכמים, דשבורדים ניהוליים ואוטומציות שיחסכו לכם זמן וכסף יקר.'] = 'Need to streamline processes? We build smart reports, management dashboards and automations that save you valuable time and money.';
-            phraseMap.heToEn['לשירותים העסקיים'] = 'Our Business Services';
-            phraseMap.heToEn['אנחנו לא רק מלמדים, אנחנו בונים. תנו לנו להפוך את הנתונים שלכם ליתרון עסקי.'] = "We don't just teach — we build. Let us turn your data into a business advantage.";
-            phraseMap.heToEn['בניית דוחות ודשבורדים'] = 'Report & dashboard development';
-            phraseMap.heToEn['אנחנו בונים דוחות ניהוליים חכמים שמתעדכנים אוטומטית. במקום לבזבז שעות על איסוף נתונים, קבלו תמונת מצב עסקית מדויקת בלחיצת כפתור. מתאים למנהלי כספים, שיווק, תפעול ומנכ"לים.'] = 'We create smart management reports that update automatically. Instead of spending hours collecting data, get an accurate business snapshot with one click. Suitable for CFOs, marketing, operations and CEOs.';
-            phraseMap.heToEn['דוחות כספיים ותקציב מול ביצוע'] = 'Financial reports & budget vs. actual';
-            phraseMap.heToEn['דשבורדים למכירות ושיווק'] = 'Sales & marketing dashboards';
-            phraseMap.heToEn['אוטומציה של תהליכי דיווח'] = 'Automation of reporting processes';
-            phraseMap.heToEn['פיתוח אוטומציה ב-VBA'] = 'VBA automation development';
-            phraseMap.heToEn['VBA\u200e (Visual Basic for Applications) היא שפת התכנות של אקסל שמאפשרת לנו ליצור "קסמים". אנחנו מפתחים מאקרואים שמבצעים פעולות מורכבות בשניות, חוסכים ימי עבודה שלמים ומונעים טעויות אנוש.'] = 'VBA (Visual Basic for Applications) is Excel\'s programming language that lets us create "magic". We develop macros that perform complex tasks in seconds, saving days of work and preventing human errors.';
-            phraseMap.heToEn['יצירת טפסים וממשקי משתמש'] = 'Creating forms and user interfaces';
-            phraseMap.heToEn['חיבור אקסל למערכות חיצוניות'] = 'Connecting Excel to external systems';
-            phraseMap.heToEn['ניקוי וסידור נתונים אוטומטי'] = 'Automatic data cleaning and structuring';
-            phraseMap.heToEn['גם בעידן ה-AI, הטכנולוגיה לא מחליפה את הצורך באקסל. כדי לעבוד בצורה מהירה ונכונה יותר, חייבים לשלוט בכלי. השילוב בין הידע המקצועי שלכם לבין יכולות ה-AI הוא כוח העל האמיתי.'] = 'Even in the AI era, technology doesn\'t replace the need for Excel. To work faster and more accurately, you must master the tool. The combination of your professional knowledge with AI capabilities is the real superpower.';
-            phraseMap.heToEn['אקסל מאפשר לכם גמישות שאף תוכנה אחרת לא נותנת. הוא נמצא בכל משרד, בכל מחשב, והוא השפה המשותפת של עולם העסקים. שליטה באקסל היא לא רק יתרון – היא הכרח לכל מי שרוצה להתקדם בקריירה או לייעל את העסק.'] = 'Excel gives you flexibility no other software provides. It\'s on every office computer and is the common language of business. Mastering Excel is not just an advantage — it\'s essential for anyone who wants to advance their career or optimize their business.';
-            phraseMap.heToEn['אל תבזבזו זמן על עבודה ידנית. בואו ללמוד איך לעבוד חכם, מהיר ומקצועי.'] = 'Don\'t waste time on manual work. Learn how to work smart, fast and professionally.';
-            phraseMap.heToEn['בהחלט! הקורס בנוי בצורה הדרגתית, החל מהבסיס ועד לרמות המתקדמות ביותר. אין צורך בידע מוקדם באקסל.'] = 'Absolutely! The course is structured progressively, from basics to advanced levels. No prior Excel knowledge required.';
-            phraseMap.heToEn['השיעורים הפרטיים מתקיימים אונליין דרך Zoom או Teams, בזמן שנוח לך, עם שיתוף מסך והסברים מותאמים אישית לקצב שלך.'] = 'Private lessons are held online via Zoom or Teams at a time that suits you, with screen sharing and personalized explanations at your pace.';
-            phraseMap.heToEn['כן, כל שיעור מוקלט ונשלח אליך בסיום, כך שאפשר לחזור על החומר ולתרגל בכל זמן שרוצים.'] = 'Yes — every lesson is recorded and sent to you afterwards so you can review the material and practice anytime.';
-            phraseMap.heToEn['כן, אני זמין לשאלות ותמיכה גם לאחר השיעור, כדי לוודא שהבנתם את החומר ושאתם מצליחים ליישם אותו בעבודה.'] = 'Yes — I\'m available for questions and support after the lesson to make sure you understood the material and can apply it at work.';
-            phraseMap.heToEn['הכרת הממשק לעומק'] = 'In-depth interface knowledge';
-            phraseMap.heToEn['פונקציות בסיס: SUM, COUNT, AVERAGE'] = 'Basic functions: SUM, COUNT, AVERAGE';
-            phraseMap.heToEn['עיצוב מותנה ועיצוב טבלאות'] = 'Conditional formatting & table styling';
-            phraseMap.heToEn['קיצורי מקלדת לחיסכון בזמן'] = 'Keyboard shortcuts for time-saving';
-            phraseMap.heToEn['פונקציות לוגיות: IF, IFS, SWITCH'] = 'Logical functions: IF, IFS, SWITCH';
-            phraseMap.heToEn['מניפולציות על טקסט ותאריכים'] = 'Text and date manipulations';
-            phraseMap.heToEn['אימות נתונים (Data Validation)'] = 'Data validation';
-            phraseMap.heToEn['Pivot Tables (טבלאות ציר)'] = 'Pivot Tables';
-            phraseMap.heToEn['Power Query - אוטומציה של נתונים'] = 'Power Query - data automation';
-            phraseMap.heToEn['לימוד PowerBI ממתחיל למתקדם'] = 'PowerBI training from beginner to advanced';
-            phraseMap.heToEn['בניית דשבורדים ויזואליים'] = 'Building visual dashboards';
-            phraseMap.heToEn['שאלות נפוצות'] = 'Frequently Asked Questions';
-            phraseMap.heToEn['רוצה להתייעץ איתנו?'] = 'Want to consult with us?';
-
-            // build reverse map (en->he) automatically
-            Object.keys(phraseMap.heToEn).forEach(k => {
-                phraseMap.enToHe[phraseMap.heToEn[k]] = k;
-            });
-
-            // collect text nodes for translation and store originals
-            const textNodes = [];
-            function isVisible(node){
-                if(!node || !node.parentElement) return false;
-                const style = window.getComputedStyle(node.parentElement);
-                return style && style.display !== 'none' && style.visibility !== 'hidden';
-            }
-
-            function walkText(node){
-                for(let child=node.firstChild; child; child=child.nextSibling){
-                    if(child.nodeType === Node.TEXT_NODE){
-                        const txt = child.nodeValue.replace(/\s+/g,' ').trim();
-                        if(txt.length > 0 && isVisible(child)){
-                            textNodes.push({node: child, original: child.nodeValue});
-                        }
-                    } else if(child.nodeType === Node.ELEMENT_NODE && child.tagName !== 'SCRIPT' && child.tagName !== 'STYLE' && child.tagName !== 'NOSCRIPT'){
-                        walkText(child);
-                    }
-                }
-            }
-
-            // keep track of current language for observer and toggles
-            let currentLang = null;
-
-            // Collect text nodes and initialize language after DOM ready
-            function initLang(){
-                try{ walkText(document.body); }catch(e){}
-                // prefer explicit URL lang param if present
-                const urlParams = new URLSearchParams(window.location.search);
-                const q = (urlParams.get('lang') || '').toLowerCase();
-                let initial = detectLanguage();
-                if(q === 'en' || q === 'he'){
-                    initial = q;
-                    try{ localStorage.setItem('siteLang', initial); }catch(e){}
-                }
-                currentLang = initial;
-                applyLang(initial);
-                // attempt to swap localized images for initial language
-                try{ swapImagesForLang(initial); }catch(e){}
-
-                // Observe DOM mutations and translate newly added nodes
-                try{
-                    const observer = new MutationObserver(mutations => {
-                        let added = false;
-                        for(const m of mutations){
-                            for(const n of m.addedNodes){
-                                try{
-                                    if(n.nodeType === Node.ELEMENT_NODE){ walkText(n); added = true; }
-                                }catch(e){}
-                            }
-                        }
-                        if(added){
-                            try{ applyLang(currentLang); }catch(e){}
-                        }
-                    });
-                    observer.observe(document.body, { childList: true, subtree: true });
-                }catch(e){}
-            }
-
-            if(document.readyState === 'loading'){
-                document.addEventListener('DOMContentLoaded', initLang);
-            } else {
-                initLang();
-            }
-
-            function detectLanguage(){
-                try{
-                    const stored = localStorage.getItem('siteLang');
-                    if(stored) return stored;
-                    const langs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
-                    for(const l of langs){
-                        const lower = (l||'').toLowerCase();
-                        if(lower.startsWith('he') || lower.includes('he-') || lower.includes('-il') || lower.endsWith('il')) return 'he';
-                    }
-                }catch(e){}
-                return 'en';
-            }
-
-            function applyLang(lang){
-                const map = translations[lang] || translations.en;
-                document.documentElement.lang = lang;
-                document.documentElement.dir = (lang === 'he') ? 'rtl' : 'ltr';
-
-                // Update mapped elements by id (keeps previous behavior)
-                Object.keys(map).forEach(key => {
-                    const el = document.getElementById(key);
-                    if(!el) return;
-                    const text = map[key];
-                    const icon = el.querySelector && el.querySelector('i');
-                    if(icon){
-                        for(const node of Array.from(el.childNodes)){
-                            if(node.nodeType === Node.TEXT_NODE) node.remove();
-                        }
-                        if(el.firstElementChild === icon){
-                            icon.insertAdjacentText('afterend', ' ' + text);
-                        } else {
-                            icon.insertAdjacentText('beforebegin', text + ' ');
-                        }
-                    } else {
-                        el.textContent = text;
-                    }
-                });
-
-                // Translate all collected text nodes using phraseMap
-                const isToEn = (lang === 'en');
-                textNodes.forEach(item => {
-                    try{
-                        const orig = item.original.replace(/\s+/g,' ').trim();
-                        if(!orig) return;
-                        let replacement = null;
-                        if(isToEn){
-                            replacement = phraseMap.heToEn[orig];
-                        } else {
-                            replacement = phraseMap.enToHe[orig];
-                        }
-                        if(replacement){
-                            // preserve leading/trailing whitespace
-                            const leading = item.original.match(/^\s*/)[0] || '';
-                            const trailing = item.original.match(/\s*$/)[0] || '';
-                            item.node.nodeValue = leading + replacement + trailing;
-                        }
-                    }catch(e){/* ignore individual node errors */}
-                });
-
-                // Fallback pass: if some nodes still contain Hebrew (or English when switching back),
-                // perform substring replacements using the phrase maps to catch partial/mixed nodes.
-                try{
-                    if(isToEn){
-                        const keys = Object.keys(phraseMap.heToEn).sort((a,b)=>b.length - a.length);
-                        textNodes.forEach(item => {
-                            try{
-                                if(!item.node || !item.node.nodeValue) return;
-                                if(!/[\u0590-\u05FF]/.test(item.node.nodeValue)) return;
-                                let txt = item.node.nodeValue;
-                                for(const k of keys){
-                                    if(txt.includes(k)) txt = txt.split(k).join(phraseMap.heToEn[k]);
-                                }
-                                if(txt !== item.node.nodeValue) item.node.nodeValue = txt;
-                            }catch(e){}
-                        });
-                    } else {
-                        const keys = Object.keys(phraseMap.enToHe).sort((a,b)=>b.length - a.length);
-                        textNodes.forEach(item => {
-                            try{
-                                if(!item.node || !item.node.nodeValue) return;
-                                // check for Latin letters as indicator of English content
-                                if(!/[A-Za-z]/.test(item.node.nodeValue)) return;
-                                let txt = item.node.nodeValue;
-                                for(const k of keys){
-                                    if(txt.includes(k)) txt = txt.split(k).join(phraseMap.enToHe[k]);
-                                }
-                                if(txt !== item.node.nodeValue) item.node.nodeValue = txt;
-                            }catch(e){}
-                        });
-                    }
-                }catch(e){}
-
-                // Update page title (document.title)
-                if(lang === 'he'){
-                    document.title = 'Excel Lab | קורס אקסל אונליין | לימוד אקסל למתקדמים';
-                } else {
-                    document.title = 'Excel Lab | Online Excel Courses | Excel Training';
-                }
-
-                // Update meta description and keywords when available
-                try{
-                    const metaDesc = document.querySelector('meta[name="description"]');
-                    const metaKeys = document.querySelector('meta[name="keywords"]');
-                    if(metaDesc){
-                        const md = (map['meta-description']) ? map['meta-description'] : metaDesc.getAttribute('content');
-                        metaDesc.setAttribute('content', md);
-                    }
-                    if(metaKeys){
-                        const mk = (map['meta-keywords']) ? map['meta-keywords'] : metaKeys.getAttribute('content');
-                        metaKeys.setAttribute('content', mk);
-                    }
-                }catch(e){}
-
-                // Update JSON-LD description if present
-                try{
-                    const ld = document.querySelector('script[type="application/ld+json"]');
-                    if(ld){
-                        try{
-                            const json = JSON.parse(ld.textContent);
-                            if(json && (map['meta-description'])){
-                                json.description = map['meta-description'];
-                                ld.textContent = JSON.stringify(json, null, 2);
-                            }
-                        }catch(e){}
-                    }
-                }catch(e){}
-
-                // Update language icon/title
-                const icon = document.getElementById('lang-icon');
-                const toggle = document.getElementById('lang-toggle');
-                if(icon) icon.className = 'fa-solid fa-language';
-                if(toggle) toggle.title = (lang === 'he') ? 'עברית (ברירת מחדל)' : 'English (default)';
-
-                localStorage.setItem('siteLang', lang);
-                // Aggressive fallback: replace Hebrew substrings inside the body's HTML
-                // This catches cases where textNodes/phraseMap misses mixed content or inline elements.
-                try{
-                    if(isToEn){
-                        let bodyHtml = document.body.innerHTML;
-                        const keys = Object.keys(phraseMap.heToEn).sort((a,b)=>b.length - a.length);
-                        for(const k of keys){
-                            if(bodyHtml.includes(k)) bodyHtml = bodyHtml.split(k).join(phraseMap.heToEn[k]);
-                        }
-                        if(bodyHtml !== document.body.innerHTML) document.body.innerHTML = bodyHtml;
-                    } else {
-                        let bodyHtml = document.body.innerHTML;
-                        const keys = Object.keys(phraseMap.enToHe).sort((a,b)=>b.length - a.length);
-                        for(const k of keys){
-                            if(bodyHtml.includes(k)) bodyHtml = bodyHtml.split(k).join(phraseMap.enToHe[k]);
-                        }
-                        if(bodyHtml !== document.body.innerHTML) document.body.innerHTML = bodyHtml;
-                    }
-                }catch(e){/* ignore aggressive fallback errors */}
-            }
-
-                // Image localization: try loading `name_lang.ext` variants (e.g. gallery1_en.webp)
-                function getLocalizedCandidate(src, lang){
-                    try{
-                        const url = new URL(src, window.location.href);
-                        const parts = url.pathname.split('/');
-                        const file = parts.pop();
-                        const m = file.match(/^(.*)\.(\w+)$/);
-                        if(!m) return null;
-                        const base = m[1];
-                        const ext = m[2];
-                        parts.push(base + '_' + lang + '.' + ext);
-                        url.pathname = parts.join('/');
-                        return url.toString();
-                    }catch(e){
-                        return null;
-                    }
-                }
-
-                function testImage(url){
-                    return new Promise(resolve => {
-                        if(!url) return resolve(false);
-                        const img = new Image();
-                        img.onload = () => resolve(true);
-                        img.onerror = () => resolve(false);
-                        img.src = url + (url.includes('?') ? '&' : '?') + 'v=1';
-                    });
-                }
-
-                async function swapImagesForLang(lang){
-                    // <img> elements
-                    const imgs = Array.from(document.getElementsByTagName('img'));
-                    await Promise.all(imgs.map(async img => {
-                        const src = img.getAttribute('src');
-                        if(!src) return;
-                        const candidate = getLocalizedCandidate(src, lang);
-                        if(!candidate) return;
-                        const ok = await testImage(candidate);
-                        if(ok){
-                            img.src = candidate;
-                        }
-                    }));
-
-                    // inline background-image style
-                    const elems = Array.from(document.querySelectorAll('*'));
-                    await Promise.all(elems.map(async el => {
-                        const style = el.style && el.style.backgroundImage;
-                        if(!style || style === 'none') return;
-                        const m = style.match(/url\(["']?(.*?)["']?\)/);
-                        if(!m) return;
-                        const bg = m[1];
-                        const candidate = getLocalizedCandidate(bg, lang);
-                        if(!candidate) return;
-                        const ok = await testImage(candidate);
-                        if(ok){
-                            el.style.backgroundImage = `url('${candidate}')`;
-                        }
-                    }));
-                }
-
-            // Lang toggle (ensure images are swapped after language change)
-            const btn = document.getElementById('lang-toggle');
-            if(btn){
-                btn.addEventListener('click', async () => {
-                    const current = document.documentElement.lang || detectLanguage();
-                    const next = (current === 'he') ? 'en' : 'he';
-                    currentLang = next;
-                    applyLang(next);
-                    try{ await swapImagesForLang(next); }catch(e){}
-                });
-            }
-        })();
-    </script>
+    <!-- Products Section -->
+    <section id="products" class="py-20 px-4 bg-gray-100 dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white" data-i18n="products_title">המוצרים שלנו</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="products_subtitle">בחרו את המוצר המתאים ביותר לצרכים שלכם – קורסים, דוחות מוכנים, תבניות אקסל ועוד.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
+                    <img src="images/product1.webp" alt="קורס אקסל אונליין" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
+                    <h3 class="text-xl font-bold mb-2 dark:text-white" data-i18n="prod_course_title">קורס אקסל אונליין</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4" data-i18n="prod_course_desc">לימוד אקסל מהבסיס ועד המתקדם, כולל תרגולים, הקלטות ותמיכה אישית.</p>
+                    <a href="#syllabus" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition" data-i18n="btn_more_info">למידע נוסף</a>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
+                    <img src="images/product2.webp" alt="תבניות אקסל חכמות" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
+                    <h3 class="text-xl font-bold mb-2 dark:text-white" data-i18n="prod_templates_title">תבניות אקסל חכמות</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4" data-i18n="prod_templates_desc">מבחר תבניות מוכנות לניהול תקציב, משימות, דוחות ועוד – להורדה מיידית.</p>
+                    <a href="#business-services" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition" data-i18n="btn_more_info">למידע נוסף</a>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
+                    <img src="images/product3.webp" alt="דוחות אוטומטיים לעסקים" class="w-24 h-24 mb-4 rounded-full object-cover bg-gray-100 dark:bg-gray-900">
+                    <h3 class="text-xl font-bold mb-2 dark:text-white" data-i18n="prod_reports_title">דוחות אוטומטיים לעסקים</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4" data-i18n="prod_reports_desc">פיתוח דוחות אוטומטיים מותאמים אישית לעסק שלך – חיסכון בזמן ובטעויות.</p>
+                    <a href="#business-services" class="mt-auto inline-block px-6 py-2 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition" data-i18n="btn_more_info">למידע נוסף</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Hero Section -->
     <section class="pt-24 pb-16 md:pt-32 md:pb-20 px-4 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-20 dark:opacity-10">
@@ -544,25 +145,25 @@
         </div>
 
         <div class="max-w-screen-xl mx-auto text-center">
-            <h1 id="hero-title" class="mb-4 text-4xl sm:text-5xl font-black tracking-tight leading-tight text-gray-900 md:text-6xl lg:text-7xl dark:text-white" style="text-wrap: balance;">
-                מומחים לאקסל <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-500 block sm:inline">ופתרונות דאטה לעסקים</span>
+            <h1 class="mb-4 text-4xl sm:text-5xl font-black tracking-tight leading-tight text-gray-900 md:text-6xl lg:text-7xl dark:text-white" style="text-wrap: balance;">
+                <span data-i18n="hero_title_1">מומחים לאקסל</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-500 block sm:inline" data-i18n="hero_title_2">ופתרונות דאטה לעסקים</span>
             </h1>
-            <p id="hero-desc" class="mb-8 text-base sm:text-lg font-normal text-gray-500 lg:text-xl sm:px-16 dark:text-gray-400 max-w-4xl mx-auto">
+            <p class="mb-8 text-base sm:text-lg font-normal text-gray-500 lg:text-xl sm:px-16 dark:text-gray-400 max-w-4xl mx-auto" data-i18n="hero_desc">
                 אנחנו הופכים נתונים לכוח. בין אם אתם מחפשים קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA או בניית דשבורדים עסקיים - הגעתם למקום הנכון.
             </p>
             <div class="flex flex-col items-center gap-4">
                 <div class="flex flex-col w-full sm:w-auto space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
-                    <a id="hero-cta-whatsapp" href="https://wa.me/972507225885" target="_blank" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-white rounded-xl bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900 transition-all hover:scale-105 shadow-xl shadow-brand-500/20">
-                        ייעוץ והרשמה בווטסאפ
-                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i>
+                    <a href="https://wa.me/972507225885" target="_blank" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-white rounded-xl bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900 transition-all hover:scale-105 shadow-xl shadow-brand-500/20">
+                        <span data-i18n="hero_btn_wa">ייעוץ והרשמה בווטסאפ</span>
+                        <i class="fa-brands fa-whatsapp mx-2 text-xl"></i>
                     </a>
-                    <a id="hero-cta-services" href="#services" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-gray-900 rounded-xl border-2 border-gray-200 hover:bg-gray-50 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-800 transition-all">
+                    <a href="#services" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-gray-900 rounded-xl border-2 border-gray-200 hover:bg-gray-50 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-800 transition-all" data-i18n="hero_btn_services">
                         לשירותים שלנו
                     </a>
                 </div>
                 <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">
                     <i class="fa-solid fa-bolt text-yellow-500 ml-1"></i>
-                    מענה מהיר לכל שאלה בנושאי אקסל ואוטומציה
+                    <span data-i18n="hero_fast_reply">מענה מהיר לכל שאלה בנושאי אקסל ואוטומציה</span>
                 </p>
             </div> 
         </div>
@@ -574,15 +175,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800">
                     <dt class="mb-2 text-4xl font-black text-brand-600 dark:text-brand-500">10+</dt>
-                    <dd id="stat1" class="text-gray-500 dark:text-gray-400 font-bold">שנות ניסיון באקסל ודאטה</dd>
+                    <dd class="text-gray-500 dark:text-gray-400 font-bold" data-i18n="stats_exp">שנות ניסיון באקסל ודאטה</dd>
                 </div>
                 <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800">
                     <dt class="mb-2 text-4xl font-black text-blue-600 dark:text-blue-500">200+</dt>
-                    <dd id="stat2" class="text-gray-500 dark:text-gray-400 font-bold">לקוחות מרוצים</dd>
+                    <dd class="text-gray-500 dark:text-gray-400 font-bold" data-i18n="stats_clients">לקוחות מרוצים</dd>
                 </div>
                 <div class="p-6 rounded-2xl bg-gray-50 dark:bg-slate-800">
                     <dt class="mb-2 text-4xl font-black text-purple-600 dark:text-purple-500">100%</dt>
-                    <dd id="stat3" class="text-gray-500 dark:text-gray-400 font-bold">פרקטיקה מעשית</dd>
+                    <dd class="text-gray-500 dark:text-gray-400 font-bold" data-i18n="stats_practical">פרקטיקה מעשית</dd>
                 </div>
             </div>
         </div>
@@ -591,16 +192,16 @@
     <!-- Workspace Gallery (Carousel) -->
     <section class="py-16 bg-gray-50 dark:bg-slate-950 overflow-hidden">
         <div class="max-w-screen-xl mx-auto px-4">
-            <h2 class="text-3xl font-black text-center mb-10 dark:text-white">הסביבה המקצועית שלנו</h2>
+            <h2 class="text-3xl font-black text-center mb-10 dark:text-white" data-i18n="gallery_title">הסביבה המקצועית שלנו</h2>
             
             <!-- Carousel Container -->
             <div class="relative" x-data="{ activeSlide: 0, slides: [0, 1, 2, 3] }">
                 
                 <!-- Buttons -->
-                <button @click="$refs.carousel.scrollBy({ left: 300, behavior: 'smooth' })" class="absolute top-1/2 -translate-y-1/2 right-4 z-10 p-2 bg-white/80 dark:bg-black/50 rounded-full shadow-lg hover:bg-white dark:hover:bg-black transition-colors hidden md:block">
+                <button @click="$refs.carousel.scrollBy({ left: -300, behavior: 'smooth' })" class="absolute top-1/2 -translate-y-1/2 right-4 z-10 p-2 bg-white/80 dark:bg-black/50 rounded-full shadow-lg hover:bg-white dark:hover:bg-black transition-colors hidden md:block">
                     <i class="fa-solid fa-chevron-right text-xl"></i>
                 </button>
-                <button @click="$refs.carousel.scrollBy({ left: -300, behavior: 'smooth' })" class="absolute top-1/2 -translate-y-1/2 left-4 z-10 p-2 bg-white/80 dark:bg-black/50 rounded-full shadow-lg hover:bg-white dark:hover:bg-black transition-colors hidden md:block">
+                <button @click="$refs.carousel.scrollBy({ left: 300, behavior: 'smooth' })" class="absolute top-1/2 -translate-y-1/2 left-4 z-10 p-2 bg-white/80 dark:bg-black/50 rounded-full shadow-lg hover:bg-white dark:hover:bg-black transition-colors hidden md:block">
                     <i class="fa-solid fa-chevron-left text-xl"></i>
                 </button>
 
@@ -610,7 +211,7 @@
                     <div class="snap-center shrink-0 w-[85vw] md:w-[600px] aspect-video bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden relative group">
                         <img src="images/gallery1.webp" alt="דשבורד עסקי באקסל וגרפים מתקדמים" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                            <span class="font-bold">דשבורדים עסקיים</span>
+                            <span class="font-bold" data-i18n="gallery_slide_1">דשבורדים עסקיים</span>
                         </div>
                     </div>
 
@@ -618,7 +219,7 @@
                     <div class="snap-center shrink-0 w-[85vw] md:w-[600px] aspect-video bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden relative group">
                         <img src="images/gallery2.webp" alt="ניתוח נתונים ודאטה אנליסט עובד עם נתונים" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                            <span class="font-bold">ניתוח נתונים מתקדם</span>
+                            <span class="font-bold" data-i18n="gallery_slide_2">ניתוח נתונים מתקדם</span>
                         </div>
                     </div>
 
@@ -626,7 +227,7 @@
                     <div class="snap-center shrink-0 w-[85vw] md:w-[600px] aspect-video bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden relative group">
                         <img src="images/gallery3.webp" alt="סביבת עבודה משרדית עם לפטופ ונתונים" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                            <span class="font-bold">סביבת עבודה פרודוקטיבית</span>
+                            <span class="font-bold" data-i18n="gallery_slide_3">סביבת עבודה פרודוקטיבית</span>
                         </div>
                     </div>
 
@@ -634,14 +235,14 @@
                      <div class="snap-center shrink-0 w-[85vw] md:w-[600px] aspect-video bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden relative group">
                         <img src="images/gallery4.webp" alt="דוחות אקסל חכמים המוצגים על מסך מחשב" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
-                            <span class="font-bold">דוחות חכמים</span>
+                            <span class="font-bold" data-i18n="gallery_slide_4">דוחות חכמים</span>
                         </div>
                     </div>
 
                 </div>
                 <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-2 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-arrows-left-right"></i>
-                    גלול לצפייה בתמונות
+                    <span data-i18n="gallery_scroll">גלול לצפייה בתמונות</span>
                 </p>
             </div>
         </div>
@@ -651,8 +252,8 @@
     <section id="services" class="py-20 px-4 bg-white dark:bg-slate-950">
         <div class="max-w-screen-xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 dark:text-white">איך נוכל לעזור לך היום?</h2>
-                <p class="text-gray-500 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 dark:text-white" data-i18n="services_title">איך נוכל לעזור לך היום?</h2>
+                <p class="text-gray-500 dark:text-gray-400 text-lg max-w-2xl mx-auto" data-i18n="services_subtitle">
                     בחר את המסלול המתאים לך ביותר - לימוד אישי או פתרון עסקי
                 </p>
             </div>
@@ -665,16 +266,16 @@
                         <div class="w-20 h-20 bg-brand-100 dark:bg-brand-900/30 rounded-full flex items-center justify-center mb-6 text-brand-600 dark:text-brand-400">
                             <i class="fa-solid fa-graduation-cap text-3xl"></i>
                         </div>
-                        <h3 class="text-3xl font-black mb-2 dark:text-white">לימוד אקסל פרטי</h3>
-                        <span class="inline-block px-3 py-1 mb-4 text-sm font-semibold text-brand-700 bg-brand-100 rounded-full dark:bg-brand-900 dark:text-brand-300">
+                        <h3 class="text-3xl font-black mb-2 dark:text-white" data-i18n="path_student_title">לימוד אקסל פרטי</h3>
+                        <span class="inline-block px-3 py-1 mb-4 text-sm font-semibold text-brand-700 bg-brand-100 rounded-full dark:bg-brand-900 dark:text-brand-300" data-i18n="path_student_badge">
                             בזום / Teams
                         </span>
-                        <p class="text-gray-500 dark:text-gray-400 mb-8 text-lg leading-relaxed">
+                        <p class="text-gray-500 dark:text-gray-400 mb-8 text-lg leading-relaxed" data-i18n="path_student_desc">
                             רוצה לשלוט באקסל? שיעורים פרטיים אחד-על-אחד, מותאמים בדיוק לרמה ולצרכים שלך. מנוסחאות בסיסיות ועד Power BI ו-VBA.
                         </p>
                         <a href="#syllabus" class="mt-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-600 border border-transparent rounded-xl hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 w-full md:w-auto">
-                            לסילבוס המלא
-                            <i class="fa-solid fa-arrow-down mr-2"></i>
+                            <span data-i18n="path_student_btn">לסילבוס המלא</span>
+                            <i class="fa-solid fa-arrow-down mx-2"></i>
                         </a>
                     </div>
                 </div>
@@ -686,16 +287,16 @@
                         <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400">
                             <i class="fa-solid fa-briefcase text-3xl"></i>
                         </div>
-                        <h3 class="text-3xl font-black mb-2 dark:text-white">פתרונות לעסקים</h3>
-                        <span class="inline-block px-3 py-1 mb-4 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
+                        <h3 class="text-3xl font-black mb-2 dark:text-white" data-i18n="path_business_title">פתרונות לעסקים</h3>
+                        <span class="inline-block px-3 py-1 mb-4 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300" data-i18n="path_business_badge">
                             ייעוץ ואוטומציה
                         </span>
-                        <p class="text-gray-500 dark:text-gray-400 mb-8 text-lg leading-relaxed">
+                        <p class="text-gray-500 dark:text-gray-400 mb-8 text-lg leading-relaxed" data-i18n="path_business_desc">
                             צריכים לייעל תהליכים? אנחנו בונים דוחות חכמים, דשבורדים ניהוליים ואוטומציות שיחסכו לכם זמן וכסף יקר.
                         </p>
                         <a href="#business-services" class="mt-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-gray-900 dark:bg-white dark:text-gray-900 border border-transparent rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 w-full md:w-auto">
-                            לשירותים העסקיים
-                            <i class="fa-solid fa-arrow-down mr-2"></i>
+                            <span data-i18n="path_business_btn">לשירותים העסקיים</span>
+                            <i class="fa-solid fa-arrow-down mx-2"></i>
                         </a>
                     </div>
                 </div>
@@ -707,8 +308,8 @@
     <section id="business-services" class="py-20 px-4 bg-gray-50 dark:bg-slate-900/50">
         <div class="max-w-screen-xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white">פתרונות עסקיים מתקדמים</h2>
-                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white" data-i18n="biz_services_title">פתרונות עסקיים מתקדמים</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="biz_services_subtitle">
                     אנחנו לא רק מלמדים, אנחנו בונים. תנו לנו להפוך את הנתונים שלכם ליתרון עסקי.
                 </p>
             </div>
@@ -718,14 +319,14 @@
                     <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400">
                         <i class="fa-solid fa-chart-line text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 dark:text-white">בניית דוחות ודשבורדים</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 dark:text-white" data-i18n="biz_report_title">בניית דוחות ודשבורדים</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed" data-i18n="biz_report_desc">
                         אנחנו בונים דוחות ניהוליים חכמים שמתעדכנים אוטומטית. במקום לבזבז שעות על איסוף נתונים, קבלו תמונת מצב עסקית מדויקת בלחיצת כפתור. מתאים למנהלי כספים, שיווק, תפעול ומנכ"לים.
                     </p>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>דוחות כספיים ותקציב מול ביצוע</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>דשבורדים למכירות ושיווק</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>אוטומציה של תהליכי דיווח</li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_report_1">דוחות כספיים ותקציב מול ביצוע</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_report_2">דשבורדים למכירות ושיווק</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_report_3">אוטומציה של תהליכי דיווח</span></li>
                     </ul>
                 </div>
 
@@ -733,14 +334,14 @@
                     <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400">
                         <i class="fa-solid fa-code text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 dark:text-white">פיתוח אוטומציה ב-VBA</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
-                        VBA&rlm; (Visual Basic for Applications) היא שפת התכנות של אקסל שמאפשרת לנו ליצור "קסמים". אנחנו מפתחים מאקרואים שמבצעים פעולות מורכבות בשניות, חוסכים ימי עבודה שלמים ומונעים טעויות אנוש.
+                    <h3 class="text-2xl font-bold mb-4 dark:text-white" data-i18n="biz_vba_title">פיתוח אוטומציה ב-VBA</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed" data-i18n="biz_vba_desc">
+                        VBA‏ (Visual Basic for Applications) היא שפת התכנות של אקסל שמאפשרת לנו ליצור "קסמים". אנחנו מפתחים מאקרואים שמבצעים פעולות מורכבות בשניות, חוסכים ימי עבודה שלמים ומונעים טעויות אנוש.
                     </p>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>יצירת טפסים וממשקי משתמש</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>חיבור אקסל למערכות חיצוניות</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>ניקוי וסידור נתונים אוטומטי</li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_vba_1">יצירת טפסים וממשקי משתמש</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_vba_2">חיבור אקסל למערכות חיצוניות</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="biz_vba_3">ניקוי וסידור נתונים אוטומטי</span></li>
                     </ul>
                 </div>
             </div>
@@ -753,16 +354,16 @@
         <div class="max-w-screen-xl mx-auto relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-black mb-6">למה אקסל ב-2026?</h2>
-                    <p class="text-brand-100 text-lg mb-6 leading-relaxed">
+                    <h2 class="text-3xl md:text-4xl font-black mb-6" data-i18n="why_title">למה אקסל ב-2026?</h2>
+                    <p class="text-brand-100 text-lg mb-6 leading-relaxed" data-i18n="why_p1">
                         גם בעידן ה-AI, הטכנולוגיה לא מחליפה את הצורך באקסל. כדי לעבוד בצורה מהירה ונכונה יותר, חייבים לשלוט בכלי. השילוב בין הידע המקצועי שלכם לבין יכולות ה-AI הוא כוח העל האמיתי.
                     </p>
-                    <p class="text-brand-100 text-lg mb-8 leading-relaxed">
+                    <p class="text-brand-100 text-lg mb-8 leading-relaxed" data-i18n="why_p2">
                         אקסל מאפשר לכם גמישות שאף תוכנה אחרת לא נותנת. הוא נמצא בכל משרד, בכל מחשב, והוא השפה המשותפת של עולם העסקים. שליטה באקסל היא לא רק יתרון – היא הכרח לכל מי שרוצה להתקדם בקריירה או לייעל את העסק.
                     </p>
                     <a href="https://wa.me/972507225885" class="inline-flex items-center justify-center px-6 py-3 text-base font-bold text-brand-900 bg-white rounded-lg hover:bg-gray-100 transition-all">
-                        רוצה להתייעץ איתנו?
-                        <i class="fa-solid fa-arrow-left mr-2"></i>
+                        <span data-i18n="why_btn">רוצה להתייעץ איתנו?</span>
+                        <i class="fa-solid fa-arrow-left mx-2"></i>
                     </a>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
@@ -779,8 +380,8 @@
     <section id="syllabus" class="py-20 px-4">
         <div class="max-w-screen-xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white">מה לומדים אצלנו?</h2>
-                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white" data-i18n="syllabus_title">מה לומדים אצלנו?</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="syllabus_desc">
                     הסילבוס שלנו נבנה מתוך ניסיון של שנים בשטח, כדי לתת לך את הכלים שבאמת צריך בעבודה.
                 </p>
             </div>
@@ -791,12 +392,12 @@
                     <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-seedling text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 dark:text-white">יסודות חזקים</h3>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white" data-i18n="card_basic_title">יסודות חזקים</h3>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>הכרת הממשק לעומק</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>פונקציות בסיס: SUM, COUNT, AVERAGE</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>עיצוב מותנה ועיצוב טבלאות</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>קיצורי מקלדת לחיסכון בזמן</li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_1">הכרת הממשק לעומק</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_2">פונקציות בסיס: SUM, COUNT, AVERAGE</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_3">עיצוב מותנה ועיצוב טבלאות</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_basic_4">קיצורי מקלדת לחיסכון בזמן</span></li>
                     </ul>
                 </div>
 
@@ -806,12 +407,12 @@
                     <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 dark:text-white">פונקציות מתקדמות</h3>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white" data-i18n="card_adv_title">פונקציות מתקדמות</h3>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>VLOOKUP & XLOOKUP</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>פונקציות לוגיות: IF, IFS, SWITCH</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>מניפולציות על טקסט ותאריכים</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>אימות נתונים (Data Validation)</li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_1">VLOOKUP & XLOOKUP</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_2">פונקציות לוגיות: IF, IFS, SWITCH</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_3">מניפולציות על טקסט ותאריכים</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_adv_4">אימות נתונים (Data Validation)</span></li>
                     </ul>
                 </div>
 
@@ -820,13 +421,13 @@
                     <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center mb-6 text-yellow-600 dark:text-yellow-400 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-chart-pie text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 dark:text-white">BI וניתוח נתונים</h3>
+                    <h3 class="text-xl font-bold mb-3 dark:text-white" data-i18n="card_bi_title">BI וניתוח נתונים</h3>
                     <ul class="space-y-2 text-gray-500 dark:text-gray-400 text-sm">
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>Pivot Tables (טבלאות ציר)</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>Power Pivot & Data Modeling</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>Power Query - אוטומציה של נתונים</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>לימוד PowerBI ממתחיל למתקדם</li>
-                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i>בניית דשבורדים ויזואליים</li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_1">Pivot Tables (טבלאות ציר)</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_2">Power Pivot & Data Modeling</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_3">Power Query - אוטומציה של נתונים</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_4">לימוד PowerBI ממתחיל למתקדם</span></li>
+                        <li><i class="fa-solid fa-check text-brand-500 ml-2"></i><span data-i18n="card_bi_5">בניית דשבורדים ויזואליים</span></li>
                     </ul>
                 </div>
             </div>
@@ -837,26 +438,26 @@
     <section class="py-16 md:py-20 bg-brand-600 relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div class="max-w-screen-xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">מוכנים לקחת את האקסל לשלב הבא?</h2>
-            <p class="text-brand-100 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight" data-i18n="cta_title">מוכנים לקחת את האקסל לשלב הבא?</h2>
+            <p class="text-brand-100 text-lg md:text-xl mb-8 max-w-2xl mx-auto" data-i18n="cta_desc">
                 אל תבזבזו זמן על עבודה ידנית. בואו ללמוד איך לעבוד חכם, מהיר ומקצועי.
             </p>
             
             <div class="flex flex-col items-center gap-4 w-full max-w-md mx-auto">
                 <a href="https://wa.me/972507225885" target="_blank" class="flex flex-row items-center justify-center w-full px-4 py-3 md:px-6 md:py-4 text-sm md:text-lg font-bold text-brand-600 bg-white rounded-2xl hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center gap-2 whitespace-normal sm:whitespace-nowrap">
                     <i class="fa-brands fa-whatsapp text-xl md:text-2xl shrink-0"></i>
-                    <span>ייעוץ והרשמה בווטסאפ</span>
+                    <span data-i18n="cta_btn">ייעוץ והרשמה בווטסאפ</span>
                 </a>
                 
                 <p class="text-brand-100 text-sm font-medium">
                     <i class="fa-solid fa-bolt text-yellow-400 ml-1"></i>
-                    מענה מהיר לכל שאלה בנושאי אקסל ואוטומציה
+                    <span data-i18n="hero_fast_reply">מענה מהיר לכל שאלה בנושאי אקסל ואוטומציה</span>
                 </p>
 
                 <div class="mt-2 inline-block bg-brand-700/50 backdrop-blur-sm border border-brand-400/30 rounded-xl px-4 py-2 w-full sm:w-auto">
                     <span class="text-white font-medium text-sm md:text-base flex items-center justify-center gap-2">
                         <i class="fa-solid fa-video"></i>
-                        בקרוב: קורס דיגיטלי מלא לרכישה באתר!
+                        <span data-i18n="cta_note">בקרוב: קורס דיגיטלי מלא לרכישה באתר!</span>
                     </span>
                 </div>
             </div>
@@ -866,41 +467,41 @@
     <!-- FAQ Section -->
     <section class="py-20 bg-gray-50 dark:bg-slate-900/50 border-t border-gray-200 dark:border-gray-800">
         <div class="max-w-screen-xl mx-auto px-4">
-            <h2 class="text-3xl font-black text-center mb-12 dark:text-white">שאלות נפוצות</h2>
+            <h2 class="text-3xl font-black text-center mb-12 dark:text-white" data-i18n="faq_title">שאלות נפוצות</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
                     <h3 class="text-xl font-bold mb-3 dark:text-white flex items-center gap-2">
                         <i class="fa-solid fa-circle-question text-brand-500"></i>
-                        האם הקורס מתאים למתחילים?
+                        <span data-i18n="faq_1_q">האם הקורס מתאים למתחילים?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-500 dark:text-gray-400" data-i18n="faq_1_a">
                         בהחלט! הקורס בנוי בצורה הדרגתית, החל מהבסיס ועד לרמות המתקדמות ביותר. אין צורך בידע מוקדם באקסל.
                     </p>
                 </div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
                     <h3 class="text-xl font-bold mb-3 dark:text-white flex items-center gap-2">
                         <i class="fa-solid fa-video text-brand-500"></i>
-                        איך מתבצעים השיעורים?
+                        <span data-i18n="faq_2_q">איך מתבצעים השיעורים?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-500 dark:text-gray-400" data-i18n="faq_2_a">
                         השיעורים הפרטיים מתקיימים אונליין דרך Zoom או Teams, בזמן שנוח לך, עם שיתוף מסך והסברים מותאמים אישית לקצב שלך.
                     </p>
                 </div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
                     <h3 class="text-xl font-bold mb-3 dark:text-white flex items-center gap-2">
                         <i class="fa-solid fa-record-vinyl text-brand-500"></i>
-                        האם מקבלים הקלטה?
+                        <span data-i18n="faq_3_q">האם מקבלים הקלטה?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-500 dark:text-gray-400" data-i18n="faq_3_a">
                         כן, כל שיעור מוקלט ונשלח אליך בסיום, כך שאפשר לחזור על החומר ולתרגל בכל זמן שרוצים.
                     </p>
                 </div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
                     <h3 class="text-xl font-bold mb-3 dark:text-white flex items-center gap-2">
                         <i class="fa-solid fa-headset text-brand-500"></i>
-                        האם מקבלים תמיכה לאחר השיעורים?
+                        <span data-i18n="faq_4_q">האם מקבלים תמיכה לאחר השיעורים?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400">
+                    <p class="text-gray-500 dark:text-gray-400" data-i18n="faq_4_a">
                         כן, אני זמין לשאלות ותמיכה גם לאחר השיעור, כדי לוודא שהבנתם את החומר ושאתם מצליחים ליישם אותו בעבודה.
                     </p>
                 </div>
@@ -913,7 +514,7 @@
         <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
                 <span class="text-2xl font-black text-gray-900 dark:text-white">excel-lab</span>
-                <p class="text-sm text-gray-500 mt-1">© 2026 כל הזכויות שמורות</p>
+                <p class="text-sm text-gray-500 mt-1" data-i18n="footer_rights">© 2026 כל הזכויות שמורות</p>
             </div>
             <div class="flex space-x-6 space-x-reverse rtl:space-x-reverse">
                 <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
@@ -928,6 +529,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Main Logic Script -->
+    <script src="js/main.js"></script>
 
     <script>
         // Theme Toggle Logic
