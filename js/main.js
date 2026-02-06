@@ -282,4 +282,124 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Carousel Logic
+    const track = document.getElementById('testimonial-track');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const dotsContainer = document.getElementById('carousel-dots');
+    
+    if (track && prevBtn && nextBtn) {
+        let currentIndex = 0;
+        
+        function getSlidesToShow() {
+            return window.innerWidth >= 768 ? 2 : 1;
+        }
+
+        function updateCarousel() {
+            const slidesToShow = getSlidesToShow();
+            const slides = track.children;
+            const totalSlides = slides.length;
+            const slideWidth = 100 / slidesToShow;
+            
+            const isRTL = document.documentElement.dir === 'rtl';
+            // In LTR: Next item is Right -> Move Left (Negative)
+            // In RTL: Next item is Left -> Move Right (Positive)
+            const directionMultiplier = isRTL ? 1 : -1; 
+            
+            const translateValue = currentIndex * slideWidth * directionMultiplier; 
+            track.style.transform = `translateX(${translateValue}%)`;
+
+            // Update disabled states
+            const maxIndex = totalSlides - slidesToShow;
+            
+            // Safeguard index
+            if(currentIndex > maxIndex) currentIndex = maxIndex;
+            if(currentIndex < 0) currentIndex = 0;
+
+            prevBtn.disabled = currentIndex <= 0;
+            nextBtn.disabled = currentIndex >= maxIndex;
+            prevBtn.style.opacity = currentIndex <= 0 ? '0.3' : '1';
+            nextBtn.style.opacity = currentIndex >= maxIndex ? '0.3' : '1';
+            
+            updateDots(currentIndex, maxIndex);
+        }
+
+        function createDots() {
+            if(!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            
+            const slidesToShow = getSlidesToShow();
+            const slides = track.children;
+            const totalSlides = slides.length;
+            const maxIndex = totalSlides - slidesToShow; 
+            
+            // Create dots for possible positions
+            for (let i = 0; i <= maxIndex; i++) {
+                const dot = document.createElement('button');
+                // Basic classes
+                dot.className = `w-2 md:w-3 h-2 md:h-3 rounded-full transition-colors`;
+                dot.ariaLabel = `Go to slide ${i + 1}`;
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            }
+            updateDots(currentIndex, maxIndex);
+        }
+
+        function updateDots(activeIdx, maxIdx) {
+             if(!dotsContainer) return;
+             const dots = dotsContainer.children;
+             for(let i=0; i<dots.length; i++) {
+                 // Reset classes
+                 dot = dots[i];
+                 if(i === activeIdx) {
+                     dot.className = `w-3 h-3 rounded-full transition-colors bg-brand-600 scale-125`;
+                 } else {
+                     dot.className = `w-3 h-3 rounded-full transition-colors bg-gray-300 dark:bg-gray-600 hover:bg-gray-400`;
+                 }
+             }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+             const slidesToShow = getSlidesToShow();
+             const slides = track.children;
+             const totalSlides = slides.length;
+            if (currentIndex < totalSlides - slidesToShow) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            // Re-calculate limits
+            const slidesToShow = getSlidesToShow();
+            const slides = track.children;
+            const totalSlides = slides.length;
+            if (currentIndex > totalSlides - slidesToShow) {
+                currentIndex = totalSlides - slidesToShow;
+            }
+            createDots(); // Dots amount might change if we change logic, here it changes because maxIndex changes
+            updateCarousel();
+        });
+
+        // Observer for lang/dir change
+        const observer = new MutationObserver(() => {
+            updateCarousel();
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+
+        // Init
+        createDots();
+        setTimeout(updateCarousel, 50);
+    }
 });
