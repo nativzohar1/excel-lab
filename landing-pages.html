@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="lp_page_title">בניית דפי נחיתה לעסקים | Excel Lab</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
-    <meta name="description" content="בניית דפי נחיתה מקצועיים לעסקים בקוד נקי. דפי נחיתה מהירים, מותאמים לקידום אורגני (SEO) וממירים לקוחות. החל מ-400 ש״ח.">
-    <meta name="keywords" content="בניית דפי נחיתה, דף נחיתה לעסק, דף נחיתה 400 שקל, דף נחיתה קוד נקי, קידום אורגני, landing page">
+    <meta name="description" content="בניית דפי נחיתה מקצועיים לעסקים. דפי נחיתה מהירים, מותאמים לקידום אורגני (SEO) וממירים לקוחות. החל מ-400 ש״ח.">
+    <meta name="keywords" content="בניית דפי נחיתה, דף נחיתה לעסק, דף נחיתה 400 שקל, דף נחיתה, קידום אורגני, landing page">
     <link rel="canonical" href="https://excel-lab.vercel.app/landing-pages.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://excel-lab.vercel.app/landing-pages.html">
     <meta property="og:title" content="בניית דפי נחיתה לעסקים | Excel Lab">
-    <meta property="og:description" content="בניית דפי נחיתה מקצועיים לעסקים בקוד נקי. דפי נחיתה מהירים, מותאמים לקידום אורגני (SEO) וממירים לקוחות.">
+    <meta property="og:description" content="בניית דפי נחיתה מקצועיים לעסקים. דפי נחיתה מהירים, מותאמים לקידום אורגני (SEO) וממירים לקוחות.">
     <meta property="og:image" content="https://excel-lab.vercel.app/images/logo.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://excel-lab.vercel.app/landing-pages.html">
     <meta property="twitter:title" content="בניית דפי נחיתה לעסקים | Excel Lab">
-    <meta property="twitter:description" content="בניית דפי נחיתה מקצועיים לעסקים בקוד נקי. דפי נחיתה מהירים, מותאמים לקידום אורגני (SEO) וממירים לקוחות.">
+    <meta property="twitter:description" content="בניית דפי נחיתה מקצועיים לעסקים. דפי נחיתה מהירים, מותאמים לקידום אורגני (SEO) וממירים לקוחות.">
     <meta property="twitter:image" content="https://excel-lab.vercel.app/images/logo.webp">
 
     <!-- Schema Markup -->
@@ -41,15 +41,18 @@
     </script>
     
     <!-- Tailwind CSS -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" media="print" onload="this.media='all'">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -67,7 +70,8 @@
                             50: '#f0fdf4',
                             100: '#dcfce7',
                             500: '#22c55e', // Green for Excel/WhatsApp
-                            600: '#16a34a',
+                            600: '#15803d', // Darker green for better contrast
+                            700: '#166534',
                             900: '#14532d',
                         }
                     }
@@ -78,6 +82,7 @@
     <style>
         body {
             font-family: 'Heebo', sans-serif;
+            font-display: swap;
         }
         .glass {
             background: rgba(255, 255, 255, 0.05);
@@ -97,25 +102,25 @@
         <div class="max-w-screen-xl flex items-center justify-between mx-auto p-2 sm:p-4">
             <a href="index.html" class="flex items-center gap-2 rtl:space-x-reverse shrink-0">
                 <!-- Logo -->
-                <img src="images/logo.webp" alt="Excel Lab Logo" class="h-8 sm:h-10 w-auto rounded-full bg-white p-0.5">
+                <img src="images/logo.webp" alt="Excel Lab Logo" width="40" height="40" class="h-8 sm:h-10 w-auto rounded-full bg-white p-0.5" fetchpriority="high">
                 <span class="self-center text-xl sm:text-2xl font-black whitespace-nowrap tracking-tight hidden sm:block">excel-lab</span>
             </a>
             <div class="flex md:order-2 space-x-1 sm:space-x-3 md:space-x-0 rtl:space-x-reverse gap-1 sm:gap-3 items-center">
                  <!-- Language Toggle -->
-                 <button id="lang-toggle-btn" class="flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 font-bold">
+                 <button id="lang-toggle-btn" aria-label="Toggle Language" class="flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 font-bold">
                     <i class="fa-solid fa-globe mx-1"></i>
                     <span id="lang-label" class="hidden sm:inline">English</span>
                 </button>
                 
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2">
+                <button id="theme-toggle" type="button" aria-label="Toggle Dark Mode" class="text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2">
                     <i id="theme-icon" class="fa-solid fa-sun"></i>
                 </button>
-                <a href="https://wa.me/972507225885" target="_blank" class="text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-bold rounded-lg text-sm px-3 py-2 md:px-4 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800 flex items-center gap-2">
+                <a href="https://wa.me/972507225885" target="_blank" aria-label="Contact us on WhatsApp" class="text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-bold rounded-lg text-sm px-3 py-2 md:px-4 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800 flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     <span data-i18n="nav_talk" class="hidden sm:inline">דבר איתי</span>
                 </a>
-                <a href="landing-pages.html" class="hidden md:block text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline" data-i18n="nav_landing_pages">דפי נחיתה</a>
-                <a href="index.html" class="hidden md:block text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline" data-i18n="nav_products">המוצרים שלנו</a>
+                <a href="landing-pages.html" class="text-gray-900 dark:text-white font-bold text-xs sm:text-sm px-2 py-2 md:px-4 text-center hover:underline" data-i18n="nav_landing_pages">דפי נחיתה</a>
+                <a href="index.html" class="text-gray-900 dark:text-white font-bold text-xs sm:text-sm px-2 py-2 md:px-4 text-center hover:underline" data-i18n="nav_products">המוצרים שלנו</a>
             </div>
         </div>
     </nav>
@@ -123,6 +128,7 @@
     <!-- Products Section REMOVED as per user request -->
 
     <!-- Hero Section -->
+    <main>
     <section class="pt-28 pb-12 md:pt-40 md:pb-20 px-4 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-20 dark:opacity-10">
             <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-500 blur-3xl"></div>
@@ -131,14 +137,14 @@
 
         <div class="max-w-screen-xl mx-auto text-center">
             <h1 class="mb-6 text-4xl sm:text-5xl font-black tracking-tight leading-tight text-gray-900 md:text-6xl lg:text-7xl dark:text-white" style="text-wrap: balance;">
-                <span data-i18n="lp_hero_title_1">בניית דפי נחיתה</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-500 block sm:inline mt-2 sm:mt-0" data-i18n="lp_hero_title_2">שממירים לקוחות</span>
+                <span data-i18n="lp_hero_title_1">דף נחיתה</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-500 block sm:inline mt-2 sm:mt-0" data-i18n="lp_hero_title_2">שממיר לקוחות</span>
             </h1>
-            <p class="mb-8 text-base sm:text-lg font-normal text-gray-500 lg:text-xl sm:px-16 dark:text-gray-400 max-w-4xl mx-auto" data-i18n="lp_hero_desc">
-                דפי נחיתה מקצועיים בקוד נקי, מותאמים לקידום אורגני (SEO) ומהירים במיוחד. החל מ-400 ש״ח בלבד.
+            <p class="mb-8 text-base sm:text-lg font-normal text-gray-600 lg:text-xl sm:px-16 dark:text-gray-400 max-w-4xl mx-auto" data-i18n="lp_hero_desc">
+                דפי נחיתה מקצועיים, מותאמים לקידום אורגני (SEO) ומהירים במיוחד. החל מ-400 ש״ח בלבד.
             </p>
             <div class="flex flex-col items-center gap-4">
                 <div class="flex flex-col w-full sm:w-auto space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
-                    <a href="https://wa.me/972507225885" target="_blank" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-white rounded-xl bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900 transition-all hover:scale-105 shadow-xl shadow-brand-500/20">
+                    <a href="https://wa.me/972507225885" target="_blank" aria-label="Contact us on WhatsApp" class="inline-flex justify-center items-center py-3 px-6 text-lg font-bold text-center text-white rounded-xl bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900 transition-all hover:scale-105 shadow-xl shadow-brand-500/20">
                         <span data-i18n="lp_hero_btn">הזמן דף נחיתה עכשיו</span>
                         <i class="fa-brands fa-whatsapp mx-2 text-xl"></i>
                     </a>
@@ -150,18 +156,18 @@
     <!-- What is a Landing Page Section -->
     <section class="py-16 bg-white dark:bg-slate-900 border-y border-gray-200 dark:border-gray-800">
         <div class="max-w-screen-xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-black mb-6 dark:text-white" data-i18n="lp_what_is_title">למה צריך דף נחיתה?</h2>
-            <p class="text-gray-500 dark:text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed" data-i18n="lp_what_is_desc">
-                דף נחיתה הוא כרטיס הביקור הדיגיטלי הממוקד שלכם. בניגוד לאתר שלם, דף נחיתה נועד למטרה אחת: להפוך מבקרים ללקוחות משלמים.
+            <h2 class="text-3xl md:text-4xl font-black mb-6 dark:text-white" data-i18n="lp_what_is_title">מה זה דף נחיתה?</h2>
+            <p class="text-gray-600 dark:text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed" data-i18n="lp_what_is_desc">
+                המסך שאתם גוללים עכשיו, העמוד הזה - זה גם דף נחיתה! רוצים כזה? דף של עמוד 1 או 2 בדר"כ שנועד למטרה אחת: להביא לכם לקוחות. בניגוד לאתר שלם, דף נחיתה הוא כרטיס הביקור הדיגיטלי הממוקד שלכם שנועד להפוך מבקרים ללקוחות משלמים.
             </p>
         </div>
     </section>
 
-    <!-- Why Pure Code Section -->
+    <!-- Why Build With Us Section -->
     <section class="py-20 px-4 bg-gray-50 dark:bg-slate-950">
         <div class="max-w-screen-xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white" data-i18n="lp_why_code_title">למה בקוד נקי (Pure Code)?</h2>
+                <h2 class="text-3xl md:text-4xl font-black mb-4 dark:text-white" data-i18n="lp_why_code_title">למה לבנות אצלנו?</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -171,8 +177,8 @@
                         <i class="fa-solid fa-bolt text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 dark:text-white" data-i18n="lp_why_code_1_title">מהירות שיא</h3>
-                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed" data-i18n="lp_why_code_1_desc">
-                        דפים שבנויים בקוד נקי נטענים בשבריר שנייה, מה שמונע נטישת לקוחות ומעלה את יחס ההמרה.
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="lp_why_code_1_desc">
+                        דפים שבנויים נכון נטענים בשבריר שנייה, מה שמונע נטישת לקוחות ומעלה את יחס ההמרה.
                     </p>
                 </div>
 
@@ -182,8 +188,8 @@
                         <i class="fa-brands fa-google text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 dark:text-white" data-i18n="lp_why_code_2_title">SEO חזק במיוחד</h3>
-                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed" data-i18n="lp_why_code_2_desc">
-                        גוגל אוהבת קוד נקי. הדפים שלנו בנויים לפי כל ה-Best Practices של גוגל לקידום אורגני.
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="lp_why_code_2_desc">
+                        גוגל אוהבת אתרים מהירים. הדפים שלנו בנויים לפי כל ה-Best Practices של גוגל לקידום אורגני.
                     </p>
                 </div>
 
@@ -193,7 +199,7 @@
                         <i class="fa-solid fa-mobile-screen-button text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 dark:text-white" data-i18n="lp_why_code_3_title">התאמה מושלמת למובייל</h3>
-                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed" data-i18n="lp_why_code_3_desc">
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="lp_why_code_3_desc">
                         100% רספונסיבי. נראה מעולה ועובד חלק בכל סמארטפון, בדיוק איפה שהלקוחות שלכם נמצאים.
                     </p>
                 </div>
@@ -215,15 +221,15 @@
                     <div class="relative h-full bg-white dark:bg-slate-900 ring-1 ring-gray-200 dark:ring-gray-800 rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all">
                         <h3 class="text-2xl font-black mb-2 dark:text-white" data-i18n="lp_price_1_title">דף נחיתה מקצועי</h3>
                         <div class="text-4xl font-black text-brand-600 dark:text-brand-400 my-4" data-i18n="lp_price_1_price">400 ₪</div>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm" data-i18n="lp_price_1_desc">
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm" data-i18n="lp_price_1_desc">
                             דף נחיתה מעוצב, רספונסיבי ומהיר.
                         </p>
                         <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm mb-8 text-start w-full">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> <span data-i18n="lp_price_1_f1">עיצוב מותאם אישית</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> <span data-i18n="lp_price_1_f2">קוד נקי ומהיר (SEO Friendly)</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> <span data-i18n="lp_price_1_f2">מהיר ומותאם לקידום (SEO Friendly)</span></li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> <span data-i18n="lp_price_1_f3">טופס יצירת קשר / כפתור ווטסאפ</span></li>
                         </ul>
-                        <a href="https://wa.me/972507225885" target="_blank" class="mt-auto inline-flex items-center justify-center px-6 py-3 text-base font-bold text-brand-600 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-800 rounded-xl hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-all w-full">
+                        <a href="https://wa.me/972507225885" target="_blank" aria-label="Contact us on WhatsApp" class="mt-auto inline-flex items-center justify-center px-6 py-3 text-base font-bold text-brand-600 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-800 rounded-xl hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-all w-full">
                             <span data-i18n="nav_talk">דבר איתי</span>
                         </a>
                     </div>
@@ -236,7 +242,7 @@
                         <div class="absolute top-0 -translate-y-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">מומלץ</div>
                         <h3 class="text-2xl font-black mb-2 dark:text-white" data-i18n="lp_price_2_title">דף נחיתה + Google Business</h3>
                         <div class="text-4xl font-black text-blue-600 dark:text-blue-400 my-4" data-i18n="lp_price_2_price">600 ₪</div>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm" data-i18n="lp_price_2_desc">
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm" data-i18n="lp_price_2_desc">
                             החבילה המושלמת לנוכחות דיגיטלית בולטת.
                         </p>
                         <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm mb-8 text-start w-full">
@@ -244,7 +250,7 @@
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500"></i> <span data-i18n="lp_price_2_f2">הקמת כרטיס עסק בגוגל</span></li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500"></i> <span data-i18n="lp_price_2_f3">חיבור למפות גוגל וביקורות</span></li>
                         </ul>
-                        <a href="https://wa.me/972507225885" target="_blank" class="mt-auto inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-all w-full shadow-lg shadow-blue-500/30">
+                        <a href="https://wa.me/972507225885" target="_blank" aria-label="Contact us on WhatsApp" class="mt-auto inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-all w-full shadow-lg shadow-blue-500/30">
                             <span data-i18n="nav_talk">דבר איתי</span>
                         </a>
                     </div>
@@ -256,15 +262,15 @@
                     <div class="relative h-full bg-white dark:bg-slate-900 ring-1 ring-gray-200 dark:ring-gray-800 rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all">
                         <h3 class="text-2xl font-black mb-2 dark:text-white" data-i18n="lp_price_3_title">אוטומציות לעסקים</h3>
                         <div class="text-3xl font-black text-gray-800 dark:text-gray-200 my-4" data-i18n="lp_price_3_price">בהתאמה אישית</div>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm" data-i18n="lp_price_3_desc">
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm" data-i18n="lp_price_3_desc">
                             ייעול תהליכים וחיסכון בזמן יקר.
                         </p>
                         <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm mb-8 text-start w-full">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gray-500"></i> <span data-i18n="lp_price_3_f1">חיבור מערכות (Make/Zapier)</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gray-500"></i> <span data-i18n="lp_price_3_f2">אוטומציה של לידים</span></li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gray-500"></i> <span data-i18n="lp_price_3_f3">דוחות אוטומטיים באקסל/BI</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gray-600"></i> <span data-i18n="lp_price_3_f1">חיבור מערכות (Make/Zapier)</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gray-600"></i> <span data-i18n="lp_price_3_f2">אוטומציה של לידים</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gray-600"></i> <span data-i18n="lp_price_3_f3">דוחות אוטומטיים באקסל/BI</span></li>
                         </ul>
-                        <a href="https://wa.me/972507225885" target="_blank" class="mt-auto inline-flex items-center justify-center px-6 py-3 text-base font-bold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-all w-full">
+                        <a href="https://wa.me/972507225885" target="_blank" aria-label="Contact us on WhatsApp" class="mt-auto inline-flex items-center justify-center px-6 py-3 text-base font-bold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-all w-full">
                             <span data-i18n="nav_talk">דבר איתי</span>
                         </a>
                     </div>
@@ -294,14 +300,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_1_text">"קורס חובה לכל מי שרוצה להתקדם. ההסברים פשוטים ומובנים, והכלים שקיבלתי חוסכים לי שעות עבודה כל שבוע."</p>
+                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_1_text">"הזמנו דף נחיתה לקמפיין החדש שלנו, והתוצאה מדהימה. הדף נטען בשנייה והלידים לא מפסיקים להגיע."</p>
                                 <div class="flex items-center gap-4 mt-auto">
                                     <div class="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center text-brand-600 dark:text-brand-400 font-bold text-xl">
                                         ד
                                     </div>
                                     <div>
-                                        <h4 class="font-bold dark:text-white" data-i18n="lp_testi_1_name">דניאל כהן</h4>
-                                        <p class="text-sm text-gray-500" data-i18n="lp_testi_1_role">אנליסט נתונים</p>
+                                        <h3 class="font-bold dark:text-white" data-i18n="lp_testi_1_name">דניאל</h3>
+                                        <p class="text-sm text-gray-600" data-i18n="lp_testi_1_role">בעל עסק</p>
                                     </div>
                                 </div>
                             </div>
@@ -317,14 +323,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_2_text">"הזמנו פיתוח אוטומציה לעסק, והתוצאה עלתה על כל הציפיות. דשבורד מדהים שנותן לנו תמונת מצב מדויקת בזמן אמת."</p>
+                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_2_text">"שירות מקצועי ומהיר. קיבלנו דף נחיתה מעוצב ברמה גבוהה מאוד, כולל חיבור לגוגל ביזנס שהביא לנו לקוחות חדשים מהאזור."</p>
                                 <div class="flex items-center gap-4 mt-auto">
                                     <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xl">
                                         ש
                                     </div>
                                     <div>
-                                        <h4 class="font-bold dark:text-white" data-i18n="lp_testi_2_name">שרון לוי</h4>
-                                        <p class="text-sm text-gray-500" data-i18n="lp_testi_2_role">מנכ"לית חברת לוגיסטיקה</p>
+                                        <h3 class="font-bold dark:text-white" data-i18n="lp_testi_2_name">שרון</h3>
+                                        <p class="text-sm text-gray-600" data-i18n="lp_testi_2_role">מנכ"לית חברת לוגיסטיקה</p>
                                     </div>
                                 </div>
                             </div>
@@ -340,14 +346,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_3_text">"בתור מנהל חשבונות, חשבתי שאני יודע אקסל. הקורס הראה לי עולם שלם של אפשרויות שלא הכרתי. ממליץ בחום!"</p>
+                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_3_text">"האיכות באמת עושה את ההבדל. מאז שעברנו לדף הנחיתה החדש, עלות הליד שלנו ירדה משמעותית בזכות ציוני איכות גבוהים בגוגל."</p>
                                 <div class="flex items-center gap-4 mt-auto">
                                     <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-xl">
                                         ע
                                     </div>
                                     <div>
-                                        <h4 class="font-bold dark:text-white" data-i18n="lp_testi_3_name">עמית מזרחי</h4>
-                                        <p class="text-sm text-gray-500" data-i18n="lp_testi_3_role">מנהל כספים</p>
+                                        <h3 class="font-bold dark:text-white" data-i18n="lp_testi_3_name">עמית</h3>
+                                        <p class="text-sm text-gray-600" data-i18n="lp_testi_3_role">מנהל כספים</p>
                                     </div>
                                 </div>
                             </div>
@@ -363,14 +369,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_4_text">"הניהול מלאי שלנו עבר מהפכה. אקסל אחד שבנו לנו חסך חצי משרה של פקיד. מקצוענות אמיתית!"</p>
+                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_4_text">"השקעה שווה כל שקל. הדף נראה מעולה גם במחשב וגם בטלפון, והאוטומציה שמחברת את הלידים ישר לווטסאפ חוסכת לי המון זמן."</p>
                                 <div class="flex items-center gap-4 mt-auto">
                                     <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-400 font-bold text-xl">
                                         ר
                                     </div>
                                     <div>
-                                        <h4 class="font-bold dark:text-white" data-i18n="lp_testi_4_name">רונית אברהם</h4>
-                                        <p class="text-sm text-gray-500" data-i18n="lp_testi_4_role">בעלת חנות אונליין</p>
+                                        <h3 class="font-bold dark:text-white" data-i18n="lp_testi_4_name">רונית</h3>
+                                        <p class="text-sm text-gray-600" data-i18n="lp_testi_4_role">בעלת חנות אונליין</p>
                                     </div>
                                 </div>
                             </div>
@@ -386,14 +392,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_5_text">"הגעתי ללא ידע בכלל והיום אני בונה דוחות להנהלה. שיטת הלימוד הייתה מאוד ברורה וסבלנית. תודה רבה!"</p>
+                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_5_text">"חיפשתי פתרון מהיר וזול לדף נחיתה, וקיבלתי מוצר פרימיום. ממליץ בחום לכל בעל עסק שרוצה נוכחות דיגיטלית מקצועית."</p>
                                 <div class="flex items-center gap-4 mt-auto">
                                     <div class="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center text-red-600 dark:text-red-400 font-bold text-xl">
                                         י
                                     </div>
                                     <div>
-                                        <h4 class="font-bold dark:text-white" data-i18n="lp_testi_5_name">יוסי בניון</h4>
-                                        <p class="text-sm text-gray-500" data-i18n="lp_testi_5_role">מנהל מכירות</p>
+                                        <h3 class="font-bold dark:text-white" data-i18n="lp_testi_5_name">יוסי</h3>
+                                        <p class="text-sm text-gray-600" data-i18n="lp_testi_5_role">מנהל מכירות</p>
                                     </div>
                                 </div>
                             </div>
@@ -409,14 +415,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_6_text">"עזר לי מאוד בעבודת הסמינריון. ניתוח הנתונים הפך מסיוט לחוויה מעניינת וקלה. המחיר שווה כל שקל."</p>
+                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_6_text">"השירות היה מעל ומעבר. כל בקשה שלי נענתה במהירות, והתוצאה הסופית פשוט מושלמת. תודה רבה!"</p>
                                 <div class="flex items-center gap-4 mt-auto">
                                     <div class="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center text-orange-600 dark:text-orange-400 font-bold text-xl">
                                         מ
                                     </div>
                                     <div>
-                                        <h4 class="font-bold dark:text-white" data-i18n="lp_testi_6_name">מיה שרייבר</h4>
-                                        <p class="text-sm text-gray-500" data-i18n="lp_testi_6_role">סטודנטית לתעו"נ</p>
+                                        <h3 class="font-bold dark:text-white" data-i18n="lp_testi_6_name">מיה</h3>
+                                        <p class="text-sm text-gray-600" data-i18n="lp_testi_6_role">בעלת עסק</p>
                                     </div>
                                 </div>
                             </div>
@@ -432,14 +438,14 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_7_text">"שירות VIP. כל שאלה שהייתה לי נענתה במהירות, והפתרונות היו יצירתיים וחכמים. לא האמנתי שאקסל יכול לעשות דברים כאלה."</p>
+                                <p class="text-gray-600 dark:text-gray-300 italic mb-6 text-lg flex-grow" data-i18n="lp_testi_7_text">"הדף נחיתה הכי טוב שהיה לי. העיצוב נקי, המסר ברור, והכי חשוב - הוא מביא עבודה. תודה על המקצועיות."</p>
                                 <div class="flex items-center gap-4 mt-auto">
                                     <div class="w-12 h-12 rounded-full bg-teal-100 dark:bg-teal-900 flex items-center justify-center text-teal-600 dark:text-teal-400 font-bold text-xl">
                                         א
                                     </div>
                                     <div>
-                                        <h4 class="font-bold dark:text-white" data-i18n="lp_testi_7_name">אלון גורן</h4>
-                                        <p class="text-sm text-gray-500" data-i18n="lp_testi_7_role">יזם הייטק</p>
+                                        <h3 class="font-bold dark:text-white" data-i18n="lp_testi_7_name">אלון</h3>
+                                        <p class="text-sm text-gray-600" data-i18n="lp_testi_7_role">יזם הייטק</p>
                                     </div>
                                 </div>
                             </div>
@@ -449,10 +455,10 @@
                 </div>
 
                 <!-- Controls -->
-                <button id="carousel-next" class="absolute top-1/2 start-0 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 focus:outline-none z-10 transition-colors mx-2 opacity-70 hover:opacity-100 dark:border dark:border-gray-700">
+                <button id="carousel-next" aria-label="Next Testimonial" class="absolute top-1/2 start-0 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 focus:outline-none z-10 transition-colors mx-2 opacity-70 hover:opacity-100 dark:border dark:border-gray-700">
                     <i class="fa-solid fa-chevron-left rtl:rotate-180"></i>
                 </button>
-                <button id="carousel-prev" class="absolute top-1/2 end-0 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 focus:outline-none z-10 transition-colors mx-2 opacity-70 hover:opacity-100 dark:border dark:border-gray-700">
+                <button id="carousel-prev" aria-label="Previous Testimonial" class="absolute top-1/2 end-0 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 focus:outline-none z-10 transition-colors mx-2 opacity-70 hover:opacity-100 dark:border dark:border-gray-700">
                     <i class="fa-solid fa-chevron-right rtl:rotate-180"></i>
                 </button>
 
@@ -475,7 +481,7 @@
             </p>
             
             <div class="flex flex-col items-center gap-4 w-full max-w-md mx-auto">
-                <a href="https://wa.me/972507225885" target="_blank" class="flex flex-row items-center justify-center w-full px-4 py-3 md:px-6 md:py-4 text-sm md:text-lg font-bold text-brand-600 bg-white rounded-2xl hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center gap-2 whitespace-normal sm:whitespace-nowrap">
+                <a href="https://wa.me/972507225885" target="_blank" aria-label="Contact us on WhatsApp" class="flex flex-row items-center justify-center w-full px-4 py-3 md:px-6 md:py-4 text-sm md:text-lg font-bold text-brand-600 bg-white rounded-2xl hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center gap-2 whitespace-normal sm:whitespace-nowrap">
                     <i class="fa-brands fa-whatsapp text-xl md:text-2xl shrink-0"></i>
                     <span data-i18n="lp_hero_btn">הזמן דף נחיתה עכשיו</span>
                 </a>
@@ -498,7 +504,7 @@
                         <i class="fa-solid fa-circle-question text-brand-500"></i>
                         <span data-i18n="lp_faq_1_q">תוך כמה זמן דף הנחיתה מוכן?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400" data-i18n="lp_faq_1_a">
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="lp_faq_1_a">
                         בדרך כלל, דף נחיתה מקצועי מוכן תוך 3-5 ימי עסקים מרגע קבלת כל החומרים (טקסטים ותמונות).
                     </p>
                 </div>
@@ -507,7 +513,7 @@
                         <i class="fa-solid fa-server text-brand-500"></i>
                         <span data-i18n="lp_faq_2_q">האם המחיר כולל אחסון ודומיין?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400" data-i18n="lp_faq_2_a">
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="lp_faq_2_a">
                         המחיר הוא עבור בניית הדף. אנחנו יכולים לאחסן את הדף עבורכם בעלות סמלית, או להעביר לכם את הקוד לאחסון שלכם.
                     </p>
                 </div>
@@ -516,8 +522,8 @@
                         <i class="fa-solid fa-pen-to-square text-brand-500"></i>
                         <span data-i18n="lp_faq_3_q">האם אוכל לערוך את התוכן בעצמי?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400" data-i18n="lp_faq_3_a">
-                        מכיוון שהדף נבנה בקוד נקי לטובת ביצועים מקסימליים, שינויים מתבצעים דרכנו. אנחנו מספקים שירותי תחזוקה ועדכונים במחירים נוחים.
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="lp_faq_3_a">
+                        מכיוון שהדף נבנה לטובת ביצועים מקסימליים, שינויים מתבצעים דרכנו. אנחנו מספקים שירותי תחזוקה ועדכונים במחירים נוחים.
                     </p>
                 </div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
@@ -525,29 +531,30 @@
                         <i class="fa-solid fa-chart-line text-brand-500"></i>
                         <span data-i18n="lp_faq_4_q">האם הדף מותאם לקידום ממומן (PPC)?</span>
                     </h3>
-                    <p class="text-gray-500 dark:text-gray-400" data-i18n="lp_faq_4_a">
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="lp_faq_4_a">
                         בהחלט! הדפים שלנו בנויים במיוחד כדי להמיר תנועה מקמפיינים ממומנים בגוגל, פייסבוק ואינסטגרם, וכוללים אפשרות להטמעת פיקסלים למעקב.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-white dark:bg-slate-950 border-t border-gray-200 dark:border-gray-800 py-8">
         <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
                 <span class="text-2xl font-black text-gray-900 dark:text-white">excel-lab</span>
-                <p class="text-sm text-gray-500 mt-1" data-i18n="footer_rights">© 2026 כל הזכויות שמורות</p>
+                <p class="text-sm text-gray-600 mt-1" data-i18n="footer_rights">© 2026 כל הזכויות שמורות</p>
             </div>
             <div class="flex gap-6 w-full md:w-auto justify-center md:justify-end mt-4 md:mt-0">
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
+                <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
                     <i class="fa-brands fa-facebook text-xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
+                <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
                     <i class="fa-brands fa-linkedin text-xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
+                <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 min-w-[24px] text-center">
                     <i class="fa-brands fa-instagram text-xl"></i>
                 </a>
             </div>
@@ -555,7 +562,7 @@
     </footer>
 
     <!-- Main Logic Script -->
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 
     <script>
         // Theme Toggle Logic
