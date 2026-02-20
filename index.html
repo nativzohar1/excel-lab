@@ -7,8 +7,22 @@
     <title data-i18n="page_title">Excel Lab | Excel Course Online | Advanced Excel Learning</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
     <meta name="description" content="Excel & BI experts for business. Online Excel courses, VBA automation, Power BI, Dashboards. Professional consulting to save you time and money.">
-    <meta name="keywords" content="korse excel, excel online, power bi, vba, excel automation, dashboards">
+    <meta name="keywords" content="קורס אקסל, אקסל אונליין, power bi, vba, אוטומציה באקסל, דשבורדים, excel online, korse excel">
     <link rel="canonical" href="https://excel-lab.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://excel-lab.vercel.app/">
+    <meta property="og:title" content="Excel Lab | מומחים לאקסל ופתרונות דאטה לעסקים">
+    <meta property="og:description" content="אנחנו הופכים נתונים לכוח. קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA ובניית דשבורדים עסקיים.">
+    <meta property="og:image" content="https://excel-lab.vercel.app/images/logo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://excel-lab.vercel.app/">
+    <meta property="twitter:title" content="Excel Lab | מומחים לאקסל ופתרונות דאטה לעסקים">
+    <meta property="twitter:description" content="אנחנו הופכים נתונים לכוח. קורס אקסל מקצועי, פיתוח אוטומציה ב-VBA ובניית דשבורדים עסקיים.">
+    <meta property="twitter:image" content="https://excel-lab.vercel.app/images/logo.webp">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -80,25 +94,25 @@
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center gap-2 rtl:space-x-reverse">
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-2 sm:p-4">
+            <a href="#" class="flex items-center gap-2 rtl:space-x-reverse shrink-0">
                 <!-- Logo -->
-                <img src="images/logo.webp" alt="Excel Lab Logo" class="h-10 w-auto rounded-full bg-white p-0.5">
-                <span class="self-center text-2xl font-black whitespace-nowrap tracking-tight">excel-lab</span>
+                <img src="images/logo.webp" alt="Excel Lab Logo" class="h-8 sm:h-10 w-auto rounded-full bg-white p-0.5">
+                <span class="self-center text-xl sm:text-2xl font-black whitespace-nowrap tracking-tight hidden sm:block">excel-lab</span>
             </a>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-3 items-center">
+            <div class="flex md:order-2 space-x-1 sm:space-x-3 md:space-x-0 rtl:space-x-reverse gap-1 sm:gap-3 items-center">
                  <!-- Language Toggle -->
-                 <button id="lang-toggle-btn" class="flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 font-bold">
+                 <button id="lang-toggle-btn" class="flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 font-bold">
                     <i class="fa-solid fa-globe mx-1"></i>
-                    <span id="lang-label">English</span>
+                    <span id="lang-label" class="hidden sm:inline">English</span>
                 </button>
                 
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2">
                     <i id="theme-icon" class="fa-solid fa-sun"></i>
                 </button>
                 <a href="https://wa.me/972507225885" target="_blank" class="text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-bold rounded-lg text-sm px-3 py-2 md:px-4 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800 flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span data-i18n="nav_talk">דבר איתי</span>
+                    <span data-i18n="nav_talk" class="hidden sm:inline">דבר איתי</span>
                 </a>
                 <a href="#services" class="hidden md:block text-gray-900 dark:text-white font-bold text-sm px-3 py-2 md:px-4 text-center hover:underline" data-i18n="nav_products">המוצרים שלנו</a>
             </div>
@@ -108,14 +122,14 @@
     <!-- Products Section REMOVED as per user request -->
 
     <!-- Hero Section -->
-    <section class="pt-20 pb-12 md:pt-32 md:pb-20 px-4 relative overflow-hidden">
+    <section class="pt-28 pb-12 md:pt-40 md:pb-20 px-4 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-20 dark:opacity-10">
             <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-500 blur-3xl"></div>
             <div class="absolute top-1/2 -left-24 w-72 h-72 rounded-full bg-blue-500 blur-3xl"></div>
         </div>
 
         <div class="max-w-screen-xl mx-auto text-center">
-            <h1 class="mb-6 text-3xl sm:text-5xl font-black tracking-tight leading-tight text-gray-900 md:text-6xl lg:text-7xl dark:text-white" style="text-wrap: balance;">
+            <h1 class="mb-6 text-4xl sm:text-5xl font-black tracking-tight leading-tight text-gray-900 md:text-6xl lg:text-7xl dark:text-white" style="text-wrap: balance;">
                 <span data-i18n="hero_title_1">מומחים לאקסל</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-500 block sm:inline mt-2 sm:mt-0" data-i18n="hero_title_2">ופתרונות דאטה לעסקים</span>
             </h1>
             <p class="mb-8 text-base sm:text-lg font-normal text-gray-500 lg:text-xl sm:px-16 dark:text-gray-400 max-w-4xl mx-auto" data-i18n="hero_desc">
@@ -407,7 +421,7 @@
     <!-- Testimonials Section -->
     <section class="py-20 bg-gray-50 dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800">
         <div class="max-w-screen-xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-black text-center mb-12 dark:text-white" data-i18n="testi_title">בוגרים מספרים</h2>
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-12 dark:text-white" data-i18n="testi_title">לקוחות מספרים</h2>
             
             <!-- Carousel Container -->
             <div class="relative group" id="testimonial-carousel">
